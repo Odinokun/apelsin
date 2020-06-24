@@ -1,0 +1,20 @@
+extends ../_template
+
+block variables
+  - var title       = 'Apelsin.net'
+  - var description = 'Apelsin.net'
+  - var ogtitle     = 'Apelsin.net'
+
+  - var pageHeaderTitle = 'Apelsin.net'
+  - var breadcrumbs     = 'breadcrumbs'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.index
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
