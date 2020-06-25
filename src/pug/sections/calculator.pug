@@ -1,0 +1,138 @@
+//begin calculator-form
+form.calculator-form
+  .container
+    //begin calculator-form__left
+    .calculator-form__left
+      //begin calculator
+      .calculator
+        //begin calculator-item-region
+        .calculator__item.calculator-item.calculator-item-region
+          h4.calculator-item__title Регион
+          .calculator-item-region__city
+            +svg('marker')
+            span Большая Александровка
+        //end calculator-item-region
+
+        //begin calculator-item-connected
+        .calculator__item.calculator-item.calculator-item-connected
+          h4.calculator-item__title Подключение
+          .calculator-item-connected__list-wrap
+            .calculator-item-connected__list
+              label.calculator-item-connected__label
+                input(type='radio' name='connected' checked)
+                .calculator-item-connected__item
+                  +svg('building')
+                  span Домашний<br>интернет
+              label.calculator-item-connected__label
+                input(type='radio' name='connected')
+                .calculator-item-connected__item
+                  +svg('house')
+                  span Частный<br>сектор
+              label.calculator-item-connected__label
+                input(type='radio' name='connected')
+                .calculator-item-connected__item
+                  +svg('office')
+                  span Интернет<br>в офис
+        //end calculator-item-connected
+
+        //begin calculator-item-internet
+        .calculator__item.calculator-item.calculator-item-internet
+          h4.calculator-item__title Интернет (Мбит/с)
+          .calculator-item-internet__range-slider#calculator-item-internet__range-slider
+          .calculator-item-internet__range-slider-scale
+            span 40
+            span 60
+            span 80
+            span 100
+            span 1000
+          .calculator-item-internet__static
+            label.calculator-item-internet__static-label
+              input(type='checkbox' checked).calculator-item-internet__static-checkbox
+              span.calculator-item-internet__static-text Статический IP-адрес
+            .calculator-item-internet__static-info
+              +svg('question')
+              span.calculator-item-internet__static-tooltip Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+        //end calculator-item-internet
+
+        //begin calculator-item-period
+        .calculator__item.calculator-item.calculator-item-period
+          h4.calculator-item__title Период
+          .calculator-item-period__list
+            label.calculator-item-period__label
+              input(type='radio' name='period').calculator-item-period__input
+              span.calculator-item-period__text Ежемесячная оплата
+            label.calculator-item-period__label
+              input(type='radio' name='period' checked).calculator-item-period__input
+              span.calculator-item-period__text 6 месяцев <i>- 14%</i>
+            label.calculator-item-period__label
+              input(type='radio' name='period').calculator-item-period__input
+              span.calculator-item-period__text 3 месяца <i>- 17%</i>
+            label.calculator-item-period__label
+              input(type='radio' name='period').calculator-item-period__input
+              span.calculator-item-period__text 12 месяцев <i>- 20%</i>
+        //end calculator-item-period
+
+        //begin calculator-item-tv
+        .calculator__item.calculator-item.calculator-item-tv
+          h4.calculator-item__title Телевидение (каналы)
+          .calculator-item-tv__list
+            label.calculator-item-tv__label
+              input(type='radio' name='tv').calculator-item-tv__input
+              .calculator-item-tv__info
+                .calculator-item-tv__price
+                  span 60
+                .calculator-item-tv__text
+                  span Бесплатное ТВ<br><strong>14 HD</strong>
+
+            label.calculator-item-tv__label
+              input(type='radio' name='tv').calculator-item-tv__input
+              .calculator-item-tv__info
+                .calculator-item-tv__price
+                  span 221
+                .calculator-item-tv__text
+                  span Базовый<br><strong>57 HD</strong><i>5000 фильмов</i>
+
+            label.calculator-item-tv__label
+              input(type='radio' name='tv' checked).calculator-item-tv__input
+              .calculator-item-tv__info
+                .calculator-item-tv__price
+                  span 243
+                .calculator-item-tv__text
+                  span Премиальный<br><strong>89 HD / 3 UHD</strong><i>5000 фильмов</i>
+        //end calculator-item-tv
+      //end calculator
+
+      //begin calculator-banners
+      .calculator-banners
+        span.calculator-banners__title Возможно вас заинтересует
+        .calculator-banners__list
+          a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-01.jpg")')
+            h3.calculator-banner__title Премиум-<br>подключение
+          a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-02.jpg")')
+            h3.calculator-banner__title Оптика в квартиру<br>— 1 Гбит/с
+      //end calculator-banners
+
+
+    //end calculator-form__left
+
+    //begin calculator-form__right
+    .calculator-form__right.calculator-form-right
+      //begin calculator-form-right__header
+      .calculator-form-right__header
+        h2.calculator-form-right__header-title 100 Мбит/с
+        .calculator-form-right__header-info
+          span.calculator-form-right__header-term 6 месяцев
+          span.calculator-form-right__header-sale (скидка 14%)
+      //end calculator-form-right__header
+
+      //begin calculator-form-right__item
+      .calculator-form-right__item
+        .calculator-form-right__title Интернет
+      //end calculator-form-right__item
+
+
+
+
+    //end calculator-form__right
+
+//end calculator-form
