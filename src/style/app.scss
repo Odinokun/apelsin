@@ -8,11 +8,14 @@
 //@import 'elements/burger';
 //@import 'elements/pagination';
 //@import 'elements/popup';
-//@import 'elements/slickBase';
+@import 'elements/slickBase';
 
-//section
+//main section
 @import 'sections/header';
 @import 'sections/footer';
+
+//index section
+@import 'sections/top-slider';
 
 //pages
 @import 'pages/index';
