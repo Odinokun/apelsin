@@ -1,4 +1,5 @@
 .top-slider__list {
+  margin-bottom: 0 !important;
   .prev,
   .next {
     position: absolute;
@@ -89,7 +90,6 @@
 
 .top-slider__subtitle {
   font-weight: normal;
-  line-height: 1.23;
   margin-bottom: 30px;
   color: #13162b;
 
@@ -98,7 +98,6 @@
 
 .top-slider__title {
   font-weight: bold;
-  line-height: 1.25;
   margin-bottom: 44px;
   text-transform: uppercase;
   color: #13162b;
@@ -112,10 +111,9 @@
 .top-slider__hashtag {
   font-size: 20px;
   font-weight: normal;
-  line-height: 24px;
   display: inline-block;
   margin-bottom: 22px;
-  padding: 7px 17px;
+  padding: 8px 17px;
   color: #fff;
   border-radius: 17px 0 17px 0;
   background-color: $red;

@@ -14,7 +14,7 @@ body {
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  line-height: 1.38;
+  line-height: 1.22;
   color: $text;
 }
 
@@ -122,6 +122,8 @@ svg {
 }
 
 .main {
+  background-color: #f9f9f9;
+
   flex-grow: 1;
 }
 
@@ -131,6 +133,28 @@ svg {
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.section-header {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @include max(767) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  margin: 0;
+  color: #252525;
+
+  @include responsive-font(36, 24);
+}
+
+.title--center {
+  text-align: center;
 }
 
 .btn {

@@ -4,7 +4,10 @@ $(function() {
   require('./modules/svg4everybody')();
 
   // begin phone mask
-  // require('./modules/maskedinput')();
+  require('./modules/maskedinput')();
+
+  // begin range slider
+  require('./modules/rangeSlider')();
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
