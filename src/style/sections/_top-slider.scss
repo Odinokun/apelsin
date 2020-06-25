@@ -1,0 +1,129 @@
+.top-slider__list {
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 14px;
+    height: 25px;
+    margin: auto;
+
+    @include max(1280) {
+      display: none !important;
+    }
+    &:hover {
+      svg {
+        fill: $red;
+      }
+    }
+    svg {
+      fill: #fff;
+      width: 14px;
+      height: 25px;
+      transition: fill .5s;
+    }
+  }
+  .prev {
+    transform: translateX(-613px);
+  }
+  .next {
+    transform: translateX(613px);
+  }
+  .slick-dots {
+    bottom: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+
+    @include max(767) {
+      bottom: 30px;
+    }
+    li {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: .5s;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background-color: transparent;
+      &.slick-active {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.top-slider__item {
+  display: flex !important;
+  min-height: 400px;
+  background-image: url('../img/bg-top-slider-01.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(767) {
+    min-height: 288px;
+    background-position: 0 50%;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    @include max(767) {
+      justify-content: center;
+    }
+  }
+}
+
+.top-slider__info {
+  max-width: 550px;
+}
+
+.top-slider__subtitle {
+  font-weight: normal;
+  line-height: 1.23;
+  margin-bottom: 30px;
+  color: #13162b;
+
+  @include responsive-font(30, 24);
+}
+
+.top-slider__title {
+  font-weight: bold;
+  line-height: 1.25;
+  margin-bottom: 44px;
+  text-transform: uppercase;
+  color: #13162b;
+
+  @include responsive-font(36, 24);
+  @include max(767) {
+    margin-bottom: 30px;
+  }
+}
+
+.top-slider__hashtag {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 24px;
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 7px 17px;
+  color: #fff;
+  border-radius: 17px 0 17px 0;
+  background-color: $red;
+
+  @include max(767) {
+    margin-bottom: 40px;
+  }
+  @include max(374) {
+    font-size: 18px;
+  }
+}
