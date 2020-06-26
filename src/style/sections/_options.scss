@@ -1,0 +1,129 @@
+.options-row {
+  position: relative;
+  display: flex;
+
+  @include max(767) {
+    overflow: hidden;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 8px;
+    border-radius: 5px;
+  }
+}
+
+.options-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-height: 400px;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  background-color: $brand;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(767) {
+    justify-content: flex-end;
+    min-height: 251px;
+    padding: 30px 20px;
+  }
+}
+
+.options-item--text {
+  @include max(767) {
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(47, 42, 126, .75);
+  }
+}
+
+.options-item--pic {
+  @include max(767) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.options-item__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+
+  @include max(767) {
+    margin-bottom: 14px;
+  }
+  &:hover {
+    svg {
+      transform: translateY(-5px);
+    }
+  }
+  svg {
+    fill: #fff;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 10px;
+    transition: .5s;
+  }
+}
+
+.options-item__title {
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+
+  @include responsive-font(30, 24);
+}
+
+.options-item__link {
+  line-height: 22px;
+  display: block;
+  margin-bottom: 10px;
+  transition: .5s;
+  color: rgba(255, 255, 255, .7);
+
+  @include responsive-font(18, 14);
+  @include max(767) {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.options-item__btn {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 234px;
+  height: 52px;
+  margin-top: 18px;
+  padding: 10px 25px;
+  transition: .5s;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 30px;
+  background-color: transparent;
+
+  @include max(767) {
+    display: none;
+  }
+  &:hover {
+    color: $brand;
+    border-color: #fff;
+    background-color: #fff;
+  }
+}
