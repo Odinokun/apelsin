@@ -6,6 +6,7 @@ module.exports = [
   './node_modules/slick-carousel/slick/slick.min.js',
   './node_modules/waypoints/lib/noframework.waypoints.min.js',
   './src/vendors/jquery-ui/jquery-ui.min.js',
+  './node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js',
   './src/vendors/maskedinput/jquery.maskedinput.min.js',
 
   // include fancybox3

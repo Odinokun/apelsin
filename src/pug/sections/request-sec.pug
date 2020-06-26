@@ -1,0 +1,17 @@
+.container
+  //begin request-sec__left
+  .request-sec__left
+    h2.request-sec__title Заявка на подключение
+    span.request-sec__subtitle Отправьте форму и мы подберем для вас оптимальный тариф
+  //end request-sec__left
+
+  //begin request-sec__right
+  .request-sec__right
+    form.request-sec__form
+      input(placeholder='Ваше имя').request-sec__input
+      input(placeholder='+7 (___) ___-__-__').phone-mask.request-sec__input
+      .request-sec__capcha.g-recaptcha(data-theme="dark" data-sitekey="6Lc0GMEUAAAAAJyUVsUJc2KMlUCEpxLQyV0JWn74")
+      input(type='submit' value='Отправить заявку').btn.btn--green.request-sec__submit
+      .request-sec__footer
+        span Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
+  //end request-sec__right

@@ -158,58 +158,52 @@ svg {
 }
 
 .btn {
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
-  padding: 10px 40px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 52px;
+  padding: 10px 40px;
+  cursor: pointer;
   transition: .5s;
   text-align: center;
   white-space: nowrap;
-  border-radius: 30px;
+  border-radius: 26px !important;
 }
 
-.btn--grey{
-  background-color: transparent;
+.btn--grey {
   color: #252525;
   border: 1px solid #979d9d;
+  background-color: transparent;
   &:hover {
     color: #fff;
     border-color: $green;
     background-color: $green;
   }
-
 }
 
-.btn--white{
-  //font-size: 14px;
-  //font-weight: 500;
-  //line-height: 17px;
-  //position: relative;
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-  //min-width: 234px;
-  //height: 52px;
-  //margin-top: 18px;
-  //transition: .5s;
-  //text-align: center;
+.btn--white {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, .3);
-  //border-radius: 30px;
   background-color: transparent;
-  //
-  //@include max(767) {
-  //  display: none;
-  //}
   &:hover {
     color: $brand;
     border-color: #fff;
     background-color: #fff;
   }
+}
 
+.btn--green {
+  color: #fff;
+  border: 1px solid $green;
+  background-color: $green;
+  &:hover {
+    color: #fff;
+    border-color: darken($green, 5%);
+    background-color: darken($green, 5%);
+  }
 }
