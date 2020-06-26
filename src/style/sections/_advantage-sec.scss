@@ -1,0 +1,145 @@
+//begin #TOP
+.advantage-sec__top {
+  display: flex;
+  justify-content: space-between;
+
+  @include max(680) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.advantage-sec__top-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 20px);
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include max(680) {
+    width: 100%;
+    max-width: 500px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #252525;
+  }
+}
+
+.advantage-sec__top-icon {
+  display: flex;
+  align-items: flex-end;
+  width: 60px;
+  min-height: 60px;
+  margin-bottom: 15px;
+
+  @include max(680) {
+    min-height: 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.advantage-sec__top-icon--rocket {
+  width: 42px;
+}
+
+.advantage-sec__top-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 11px;
+  text-align: center;
+  color: #252525;
+}
+
+//end #TOP
+
+//begin #BODY
+.advantage-sec__body {
+  padding-top: 10px;
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #252525;
+  }
+}
+
+.advantage-sec__body-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  margin-bottom: 20px;
+  color: #252525;
+
+  @include max(767) {
+    text-align: center;
+  }
+}
+
+.advantage-sec__body-text {
+  padding-bottom: 22px;
+}
+
+.advantage-sec__body-list {
+  margin: 0 0 20px 0;
+  padding: 0;
+  li {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+    color: #252525;
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      content: '';
+      border-radius: 50%;
+      background-color: $green;
+    }
+  }
+}
+
+.advantage-sec__body-footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  padding-top: 10px;
+
+  @include max(767) {
+    margin-bottom: 40px;
+    padding-top: 0;
+  }
+}
+
+.advantage-sec__body-btn {
+  &:hover {
+    svg {
+      fill: #fff;
+    }
+  }
+  svg {
+    flex: none;
+    fill: #252525;
+    width: 10px;
+    height: 6px;
+    margin-left: 10px;
+    transition: .5s;
+  }
+}
+
+//end #BODY
