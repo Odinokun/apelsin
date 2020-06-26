@@ -46,6 +46,32 @@ module.exports = function() {
     ]
   });
 
+  $('#news-sec__slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+           {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }, {
+        breakpoint: 680,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+
 
 
   // $('.slick').slick({

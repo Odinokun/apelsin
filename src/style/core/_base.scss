@@ -158,25 +158,58 @@ svg {
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1;
-  display: inline-block;
+  line-height: 17px;
   padding: 10px 40px;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color .5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  transition: .5s;
+  text-align: center;
   white-space: nowrap;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  border: none;
-  border-radius: 5px !important;
-  background-color: $brand;
-  box-shadow: none;
+  border-radius: 30px;
+}
+
+.btn--grey{
+  background-color: transparent;
+  color: #252525;
+  border: 1px solid #979d9d;
   &:hover {
     color: #fff;
-    background-color: darken($brand, 5%);
+    border-color: $green;
+    background-color: $green;
   }
+
+}
+
+.btn--white{
+  //font-size: 14px;
+  //font-weight: 500;
+  //line-height: 17px;
+  //position: relative;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //min-width: 234px;
+  //height: 52px;
+  //margin-top: 18px;
+  //transition: .5s;
+  //text-align: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .3);
+  //border-radius: 30px;
+  background-color: transparent;
+  //
+  //@include max(767) {
+  //  display: none;
+  //}
+  &:hover {
+    color: $brand;
+    border-color: #fff;
+    background-color: #fff;
+  }
+
 }

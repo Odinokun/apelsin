@@ -16,22 +16,38 @@ block content
     main.main.index
       include ../sections/top-slider
 
-      //begin section-header
-      .section-header
-        .container
-          h2.title.title--center.animate__animated.zoom-in Калькулятор услуг
-      //end section-header
+      //begin calculator-section
+      .calculator-section
+        //begin section-header
+        .section-header
+          .container
+            h2.title.title--center.animate__animated.zoom-in Калькулятор услуг
+        //end section-header
+        include ../sections/calculator
+      //end calculator-section
 
-      include ../sections/calculator
+      //begin presents-section
+      .presents-section
+        //begin section-header
+        .section-header
+          .container
+            h2.title.title--center.animate__animated.zoom-in Подарки для клиентов
+        //end section-header
+        include ../sections/presents
+      //end presents-section
 
-      //begin section-header
-      .section-header
-        .container
-          h2.title.title--center.animate__animated.zoom-in Подарки для клиентов
-      //end section-header
-
-      include ../sections/presents
       include ../sections/options
+
+      //begin news-sec
+      .news-sec
+        //begin section-header
+        .section-header
+          .container
+            h2.title.title--center.animate__animated.zoom-in Центр новостей
+        //end section-header
+        include ../sections/news-sec
+      //end section-header
+
       div(style='height:100vh;background:#000;')
 
     //end content
