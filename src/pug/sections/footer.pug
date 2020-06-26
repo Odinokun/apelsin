@@ -1,4 +1,93 @@
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+.footer
+  .container
+    //begin footer-item
+    .footer__item.footer-item
+      .footer-item__top
+        a(href="/").footer-item__logo
+          +svg('footer-logo')
+        span.footer-item__copyright © 2020, Apelsin.Net.<br>Все права защищены.
+      ul.footer-item__bottom-list
+        li.footer-item__bottom-item
+          a(href="#").footer-item__bottom-link Политика конфиденциальности
+        li.footer-item__bottom-item
+          a(href="#").footer-item__bottom-link Отчет о структуре собственности
+        li.footer-item__bottom-item
+          a(href="#").footer-item__bottom-link Информация для потребителей
+    //end footer-item
+
+    //begin footer-item
+    .footer__item.footer-item
+      //begin footer-item__menu-sm-list
+      ul.footer-item__menu-sm-list
+        li.footer-item__menu-sm-item
+          a(href="#").footer-item__menu-sm-link Акции
+        li.footer-item__menu-sm-item
+          a(href="#").footer-item__menu-sm-link Новости
+        li.footer-item__menu-sm-item
+          a(href="#").footer-item__menu-sm-link О компании
+        li.footer-item__menu-sm-item
+          a(href="#").footer-item__menu-sm-link Контакты
+      //end footer-item__menu-sm-list
+    //end footer-item
+
+    //begin footer-item
+    .footer__item.footer-item
+      //begin footer-item__menu-lg-list
+      ul.footer-item__menu-lg-list
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Домашний интернет
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Частный сектор
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Интернет в офис
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Оптика в квартиру
+      //end footer-item__menu-lg-list
+
+      //begin footer-item__menu-lg-list
+      ul.footer-item__menu-lg-list
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Телевидение HD
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Умный дом
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link IP Видеонаблюдение
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Дополнительные услуги
+        li.footer-item__menu-lg-item
+          a(href="#").footer-item__menu-lg-link Оборудование
+      //end footer-item__menu-lg-list
+    //end footer-item
+
+    //begin footer-item
+    .footer__item.footer-item
+      //begin footer-item__menu-contacts-list
+      ul.footer-item__menu-contacts-list
+        li.footer-item__menu-contacts-item
+          a(href="tel:+380671111008").footer-item__menu-contacts-link
+            +svg('phone')
+            span +38 (067) 1111-008 (Подключение)
+        li.footer-item__menu-contacts-item
+          a(href="tel:+380968236402").footer-item__menu-contacts-link
+            +svg('phone')
+            span +38 (096) 823-64-02 (Поддержка)
+        li.footer-item__menu-contacts-item
+          a(href="viber://chat?number=+380968236402").footer-item__menu-contacts-link
+            +svg('viber')
+            span +38 (096) 823-64-02 (Viber Чат)
+        li.footer-item__menu-contacts-item
+          a(href="skype:support.apelsin.net?chat").footer-item__menu-contacts-link
+            +svg('skype')
+            span support.apelsin.net
+        li.footer-item__menu-contacts-item
+          a(href="tg://resolve?domain=ApelsinNetBot").footer-item__menu-contacts-link
+            +svg('telega')
+            span ApelsinNetBot
+        li.footer-item__menu-contacts-item
+          a(href="https://www.facebook.com/apelsin.net" target="_blank" rel="nofollow noopener noreferrer").footer-item__menu-contacts-link
+            +svg('fb')
+            span ApelsinNet
+      //end footer-item__menu-contacts-list
+    //end footer-item
 //end footer
