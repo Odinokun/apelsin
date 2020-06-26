@@ -69,8 +69,11 @@
 
 //begin #connected
 .calculator-item-connected__list-wrap {
-  overflow: auto;
   width: 100%;
+
+  @include max(1100) {
+    overflow: auto;
+  }
 }
 
 .calculator-item-connected__list {
@@ -223,7 +226,6 @@
   font-weight: normal;
   line-height: 20px;
   display: block;
-  padding-right: 10px;
   padding-left: 30px;
   white-space: nowrap;
   color: #252525;
@@ -240,6 +242,7 @@
 
 .calculator-item-internet__static-info {
   position: relative;
+  margin-left: 10px;
   &:hover {
     .calculator-item-internet__static-tooltip {
       pointer-events: auto;
@@ -519,7 +522,6 @@
 }
 
 //end #banners
-
 //end #LEFT
 
 //begin #RIGHT
@@ -528,7 +530,7 @@
   width: calc(41.2% - 15px);
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 40px 30px;
+  padding: 40px 30px 20px 28px;
   background: #fff;
   box-shadow: 0 5px 10px rgba(57, 57, 87, .05);
 
@@ -553,6 +555,11 @@
     bottom: -10px;
     background-image: url('../img/calc-form-decor-02.png');
   }
+}
+
+//begin #right header
+.calculator-form-right__header {
+  margin-bottom: 44px;
 }
 
 .calculator-form-right__header-title {
@@ -586,5 +593,166 @@
   padding: 0 4px;
   color: #ec6707;
 }
+
+//end #right header
+
+//begin #right item
+.calculator-form-right__item {
+  margin-bottom: 48px;
+}
+
+.calculator-form-right__title {
+  position: relative;
+  margin-bottom: 20px;
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding-right: 13px;
+    color: #979d9d;
+    background-color: #fff;
+  }
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #ececf2;
+  }
+}
+
+.calculator-form-right__row {
+  display: flex;
+  margin-bottom: 11px;
+}
+
+.calculator-form-right__row-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    color: #252525;
+  }
+  strong {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #252525;
+  }
+  &:nth-child(2) {
+    flex: none;
+    width: 90px;
+    margin-left: auto;
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+//end #right item
+
+//begin #result
+.calculator-form-right__result {
+  display: flex;
+  align-items: baseline;
+  margin-top: -20px;
+  margin-bottom: 27px;
+}
+
+.calculator-form-right__result-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #252525;
+}
+
+.calculator-form-right__result-num {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 44px;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
+  color: #252525;
+}
+
+.calculator-form-right__result-currency {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  flex: none;
+  margin-left: 4px;
+  transform: translateY(-14px);
+  text-align: right;
+  color: #252525;
+}
+
+//end #result
+
+//begin #form
+.calculator-form-right__input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 16px 20px;
+  color: $text;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px !important;
+  background: #fff;
+
+  @include placeholder-color(#979d9d);
+}
+
+.calculator-form-right__agree {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 15px;
+  margin-bottom: 19px;
+  text-align: center;
+  color: #979d9d;
+  a {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    color: #979d9d;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.calculator-form-right__submit {
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.calculator-form-right__footer {
+  margin-bottom: 1px;
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    display: block;
+    text-align: center;
+    color: #252525;
+  }
+}
+
+//end #form
 
 //end #RIGHT
