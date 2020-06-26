@@ -127,25 +127,5 @@
 }
 
 .presents-slider__btn {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 52px;
   margin-top: auto;
-  transition: .5s;
-  text-align: center;
-  white-space: nowrap;
-  color: #252525;
-  border: 1px solid #979d9d;
-  border-radius: 30px;
-  background-color: transparent;
-  &:hover {
-    color: #fff;
-    border-color: $green;
-    background-color: $green;
-  }
 }
