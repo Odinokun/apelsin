@@ -57,6 +57,11 @@ block content
         //end section-header
         include ../sections/advantage-sec
       //end advantage-sec
+        
+      //begin request-sec
+      .request-sec
+        include ../sections/request-sec
+      //end request-sec
 
       div(style='height:100vh;background:#000;')
 
@@ -64,3 +69,5 @@ block content
 
     include ../sections/footer
     include ../sections/scripts
+    //script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+    script(src="https://www.google.com/recaptcha/api.js" async defer)
