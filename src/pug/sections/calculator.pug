@@ -127,12 +127,75 @@ form.calculator-form
 
       //begin calculator-form-right__item
       .calculator-form-right__item
-        .calculator-form-right__title Интернет
+        h4.calculator-form-right__title
+          span Интернет
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span <strong>Тариф «Дом»</strong>
+          .calculator-form-right__row-item
+            span <strong>257 ₴/мес.</strong>
+
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span Внешний IP
+            .calculator-item-internet__static-info
+              +svg('question')
+              span.calculator-item-internet__static-tooltip Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span Зарубежный сегмент (300 Мбит/с)
+
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span Украинский сегмент (до 1000 Мбит/с)
+
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span Статический IP-адрес
+          .calculator-form-right__row-item
+            span <strong>49 ₴/мес.</strong>
       //end calculator-form-right__item
 
+      //begin calculator-form-right__item
+      .calculator-form-right__item
+        h4.calculator-form-right__title
+          span Телевидение
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span <strong>Тариф «Премиальный»</strong>
+            .calculator-item-internet__static-info
+              +svg('question')
+              span.calculator-item-internet__static-tooltip Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
 
+          .calculator-form-right__row-item
+            span <strong>139 ₴/мес.</strong>
 
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span 243 канал (89 HD-канала)
 
+        .calculator-form-right__row
+          .calculator-form-right__row-item
+            span Услуга «Кинозал»
+      //end calculator-form-right__item
+
+      //begin calculator-form-right__result
+      .calculator-form-right__result
+        span.calculator-form-right__result-text Итого:
+        span.calculator-form-right__result-num 768
+        span.calculator-form-right__result-currency ₴
+      //end calculator-form-right__result
+
+      //begin calculator-form-right__form
+      .calculator-form-right__form
+        input(placeholder='Ваше имя').calculator-form-right__input
+        input(placeholder='+7 (___) ___-__-__').phone-mask.calculator-form-right__input
+        .calculator-form-right__agree
+          span Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
+        input(type='submit' value='Отправить заявку').btn.btn--green.calculator-form-right__submit
+        .calculator-form-right__footer
+          span 30 дней гарантии возврата денег
+      //end calculator-form-right__form
     //end calculator-form__right
-
 //end calculator-form
