@@ -9,6 +9,9 @@ $(function() {
   // begin range slider
   require('./modules/rangeSlider')();
 
+  // begin menu & submenu
+  require('./modules/menu')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
@@ -19,7 +22,7 @@ $(function() {
   // require('./modules/popup')();
 
   // begin Sticky header
-  // require('./modules/stickyHeader')();
+  require('./modules/stickyHeader')();
 
   // begin Animate.css
   require('./modules/animateCss')();

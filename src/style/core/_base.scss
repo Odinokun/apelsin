@@ -203,7 +203,7 @@ svg {
   background-color: $green;
   &:hover {
     color: #fff;
-    border-color: darken($green, 5%);
-    background-color: darken($green, 5%);
+    border-color: $green-hov;
+    background-color: $green-hov;
   }
 }
