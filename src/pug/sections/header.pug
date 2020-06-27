@@ -1,4 +1,72 @@
-// begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 #{pageHeaderTitle}
-// end header
+//begin header
+.header
+  //begin header__top
+  .header__top.header-top
+    .container
+      include ../elements/burger
+
+      a(href="#").header-top__logo
+        img(src="assets/img/logo.svg" alt="logo")
+      a(href="tel:+3800671111008").header-top__phone +380 (067) 1111-008
+      a(href="#").header-top__doit Стать абонентом
+
+      //begin header-top__menu
+      .header-top__menu
+        ul.header-top__menu-list
+          li.header-top__menu-item
+            a(href="#").header-top__menu-link Акции
+          li.header-top__menu-item
+            a(href="#").header-top__menu-link Новости
+          li.header-top__menu-item
+            a(href="#").header-top__menu-link О компании
+          li.header-top__menu-item
+            a(href="#").header-top__menu-link Контакты
+      //end header-top__menu
+
+      //begin header-top__btns
+      .header-top__btns
+        a(href="#").header-top__btn.header-top__btn--pay
+          +svg('wallet')
+          span Оплата
+        a(href="#").header-top__btn.header-top__btn--login
+          +svg('user')
+      //end header-top__btns
+  //end header__top
+
+  //begin header__bottom
+  .header__bottom.header-bottom#sticky-header
+    .container
+      //begin header-bottom__menu
+      .header-bottom__menu.header-bottom-menu
+        ul.header-bottom-menu__list
+          li.header-bottom-menu__item.header-bottom-menu__item--parent
+            span.header-bottom-menu__link Интернет
+            .header-bottom-menu__btn
+              +svg('arr-down')
+            include ../elements/submenu
+          li.header-bottom-menu__item
+            a(href="#").header-bottom-menu__link Телевидение HD
+          li.header-bottom-menu__item
+            a(href="#").header-bottom-menu__link Умный дом
+          li.header-bottom-menu__item
+            a(href="#").header-bottom-menu__link IP Видеонаблюдение
+          li.header-bottom-menu__item
+            a(href="#").header-bottom-menu__link Дополнительные услуги
+          li.header-bottom-menu__item
+            a(href="#").header-bottom-menu__link Оборудование
+      //end header-bottom__menu
+
+      //begin header-bottom__mob-menu
+      .header-bottom__mob-menu.header-bottom-mob-menu
+        ul.header-bottom-mob-menu__list
+          li.header-bottom-mob-menu__item
+            a(href="#").header-bottom-mob-menu__link Акции
+          li.header-bottom-mob-menu__item
+            a(href="#").header-bottom-mob-menu__link Новости
+          li.header-bottom-mob-menu__item
+            a(href="#").header-bottom-mob-menu__link О компании
+          li.header-bottom-mob-menu__item
+            a(href="#").header-bottom-mob-menu__link Контакты
+      //end header-bottom__mob-menu
+  //end header__bottom
+//end header

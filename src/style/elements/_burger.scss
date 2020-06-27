@@ -1,221 +1,68 @@
-.burger__menu {
-  font-family: $font, sans-serif;
-  font-size: 22px;
-  position: absolute;
-  top: 4px;
-  left: 50px;
-  letter-spacing: 1px;
-  color: #fafafa;
-}
+$burger-height: 17px;
+$burger-width: 28px;
+$burger-item: 3px;
+$burger-item-offset: $burger-height - $burger-item * 2;
+$burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
 
 .burger {
   position: relative;
-  z-index: 25;
-  width: 31px;
-  height: 31px;
-}
-
-.burger input {
   display: none;
-}
+  width: 28px;
+  height: 20px;
+  margin-top: 2px;
+  margin-right: 20px;
 
-.burger label {
-  position: relative;
-  display: block;
-  width: 31px;
-  height: 31px;
-  cursor: pointer;
-  background: transparent;
-}
-
-/* Exit Icon */
-.burger label:before,
-.burger input:checked + label:before {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  margin-top: -1px;
-  content: '';
-  transition: background-color .5s;
-  border-radius: 2px;
-  background-color: $text;
-}
-
-.burger label:before {
-  animation: animationOneReverse 1s ease forwards;
-}
-
-@keyframes animationOneReverse {
-  0% {
-    transform: rotate(315deg);
+  @include max(1150) {
+    display: block;
   }
-  25% {
-    transform: rotate(360deg);
+  @include max(374) {
+    margin-right: 15px;
   }
-  50%,
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.burger input:checked + label:before {
-  animation: animationOne 1s ease forwards;
-}
-
-@keyframes animationOne {
-  0%,
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(315deg);
-  }
-}
-
-.burger label:after,
-.burger input:checked + label:after {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  margin-top: -1px;
-  content: '';
-  transition: background-color .5s;
-  border-radius: 2px;
-  background-color: $text;
-}
-
-.burger label:after {
-  animation: animationTwoReverse 1s ease forwards;
-}
-
-@keyframes animationTwoReverse {
-  0% {
-    transform: rotate(405deg);
-  }
-  25% {
-    transform: rotate(450deg);
-  }
-  50%,
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.burger input:checked + label:after {
-  animation: animationTwo 1s ease forwards;
-}
-
-@keyframes animationTwo {
-  0%,
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(450deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
-}
-
-/* Burger Icon */
-.burger label .burger__icon:before {
-  position: absolute;
-  top: 7px;
-  width: 30px;
-  height: 2px;
-  content: '';
-  transition: background-color .5s;
-  animation: animationBurgerTopReverse 1s ease forwards;
-  border-radius: 2px;
-  background-color: $text;
-}
-
-@keyframes animationBurgerTopReverse {
-  0%,
-  50% {
-    transform: translateY(12px);
+  #burger {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: block;
+    width: $burger-width;
+    height: $burger-height;
+    cursor: pointer;
     opacity: 0;
-  }
-  51% {
-    transform: translateY(12px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 
-.burger input:checked + label .burger__icon:before {
-  animation: animationBurgerTop 1s ease forwards;
-}
+    &:checked + [for='burger']:before {
+      transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
+    }
 
-@keyframes animationBurgerTop {
-  0% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(12px);
-    opacity: 1;
-  }
-  51%,
-  100% {
-    transform: translateY(12px);
-    opacity: 0;
-  }
-}
+    &:checked + [for='burger']:after {
+      transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
 
-.burger label .burger__icon:after {
-  position: absolute;
-  bottom: 6px;
-  width: 30px;
-  height: 2px;
-  content: '';
-  transition: background-color .5s;
-  animation: animationBurgerBottomReverse 1s ease forwards;
-  border-radius: 2px;
-  background-color: $text;
-}
+      filter: initial;
+    }
+  }
 
-@keyframes animationBurgerBottomReverse {
-  0%,
-  50% {
-    transform: translateY(-12px);
-    opacity: 0;
-  }
-  51% {
-    transform: translateY(-12px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+  [for='burger'] {
+    width: $burger-width;
+    height: $burger-height;
+    margin: auto;
+    cursor: pointer;
+    user-select: none;
+    color: #252525;
+    border-radius: 0;
 
-.burger input:checked + label .burger__icon:after {
-  animation: animationBurgerBottom 1s ease forwards;
-}
+    &:before,
+    &:after {
+      display: block;
+      height: $burger-item;
+      content: '';
+      transition: .5s;
+      border-radius: inherit;
+      background: $text;
+    }
 
-@keyframes animationBurgerBottom {
-  0% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-12px);
-    opacity: 1;
-  }
-  51%,
-  100% {
-    transform: translateY(-12px);
-    opacity: 0;
+    &:after {
+      transform: translateY($burger-item-offset);
+
+      filter: drop-shadow(0 $burger-item-shadow $text);
+    }
   }
 }

@@ -628,7 +628,7 @@
 
 .calculator-form-right__row {
   display: flex;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .calculator-form-right__row-item {
@@ -651,8 +651,11 @@
     flex: none;
     width: 90px;
     margin-left: auto;
-    text-align: right;
     white-space: nowrap;
+    span {
+      width: 100%;
+      text-align: right;
+    }
   }
 }
 
@@ -662,7 +665,7 @@
 .calculator-form-right__result {
   display: flex;
   align-items: baseline;
-  margin-top: -20px;
+  margin-top: -16px;
   margin-bottom: 27px;
 }
 
