@@ -54,7 +54,7 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
       display: block;
       height: $burger-item;
       content: '';
-      transition: .5s;
+      transition: $transition;
       border-radius: inherit;
       background: $text;
     }

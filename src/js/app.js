@@ -27,10 +27,10 @@ $(function() {
   // begin Animate.css
   require('./modules/animateCss')();
 
+  // begin advantage text open
+  require('./modules/advantageOpen')();
+
   // begin calculator
   // require('./modules/calc')();
-
-  // begin Popup
-  // require('./modules/popup')();
 
 });

@@ -31,7 +31,7 @@
     top: 0;
     left: 50%;
     content: '';
-    transform: translateX(-40px);
+    transform: translateX(-32px);
     border-top: 219px solid transparent;
     border-bottom: 219px solid transparent;
     border-left: 120px solid #393957;
@@ -41,19 +41,18 @@
     }
   }
   .container {
-    position: relative;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     max-width: 1090px;
-    height: 438px;
+    min-height: 438px;
     padding-top: 30px;
     padding-bottom: 30px;
 
     @include max(767) {
       flex-direction: column;
       align-items: center;
-      height: auto;
+      min-height: auto;
     }
   }
 }

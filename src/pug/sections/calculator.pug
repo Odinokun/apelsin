@@ -27,17 +27,17 @@ form.calculator-form
             .calculator-item-connected__list
               label.calculator-item-connected__label
                 input(type='radio' name='connected' checked)
-                .calculator-item-connected__item
+                .calculator-item-connected__item.calculator-item-connected__item--building
                   +svg('building')
                   span Домашний<br>интернет
               label.calculator-item-connected__label
                 input(type='radio' name='connected')
-                .calculator-item-connected__item
+                .calculator-item-connected__item.calculator-item-connected__item--house
                   +svg('house')
                   span Частный<br>сектор
               label.calculator-item-connected__label
                 input(type='radio' name='connected')
-                .calculator-item-connected__item
+                .calculator-item-connected__item.calculator-item-connected__item--office
                   +svg('office')
                   span Интернет<br>в офис
         //end calculator-item-connected
@@ -129,18 +129,8 @@ form.calculator-form
         h2.calculator-form-right__header-title#calculator-form-right__header-title 100 Мбит/с
         .calculator-form-right__header-info
           span.calculator-form-right__header-term 6 месяцев
-          span.calculator-form-right__header-sale.tooltip-wrap (скидка 14%)
-            .tooltip.tooltip--light.calculator-form-right__header-tooltip
-              .calculator-form-right__header-tooltip-top
-                span Скидка
-                span Период
-                span Экономия
-              .calculator-form-right__header-tooltip-bottom
-                span 54 ₴/мес.
-                span.multiplication &#215;
-                span 6 месяцев
-                span.equally
-                span.highlight 120 ₴
+          span.calculator-form-right__header-sale (скидка 14%)
+
       //end calculator-form-right__header
 
       //begin calculator-form-right__item
@@ -200,6 +190,20 @@ form.calculator-form
             span Услуга «Кинозал»
       //end calculator-form-right__item
 
+      //begin calculator-form-right__economy
+      .calculator-form-right__economy
+        .calculator-form-right__economy-top
+          span Скидка
+          span Период
+          span Экономия
+        .calculator-form-right__economy-bottom
+          span 54 ₴/мес.
+          span.multiplication &#215;
+          span 6 месяцев
+          span.equally
+          span.highlight 120 ₴
+      //end calculator-form-right__economy
+
       //begin calculator-form-right__result
       .calculator-form-right__result
         span.calculator-form-right__result-text Итого:
@@ -209,8 +213,14 @@ form.calculator-form
 
       //begin calculator-form-right__form
       .calculator-form-right__form
-        input(placeholder='Ваше имя').calculator-form-right__input
-        input(placeholder='+38 (0__) ___-__-__' required).phone-mask.calculator-form-right__input.error
+        .input-required-wrap
+          input(placeholder='Ваше имя').calculator-form-right__input
+          .input-required-label
+            span Поле обязательно для заполнения
+        .input-required-wrap
+          input(placeholder='+38 (0__) ___-__-__').phone-mask.calculator-form-right__input.error
+          .input-required-label.active
+            span Поле обязательно для заполнения
         .calculator-form-right__agree
           span Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
         input(type='submit' value='Отправить заявку').btn.btn--green.calculator-form-right__submit

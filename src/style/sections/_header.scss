@@ -2,7 +2,7 @@
   padding-top: 131px;
 
   @include max(1150) {
-    padding-top: 58px;
+    padding-top: 62px;
   }
 }
 
@@ -39,9 +39,20 @@
     height: 36px;
 
     @include max(1150) {
-      width: 134px;
-      height: 23px;
+      display: none;
     }
+  }
+}
+
+.header-top__logo-mobile {
+  display: none;
+
+  @include max(1150) {
+    display: block;
+  }
+  svg {
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -55,6 +66,9 @@
 
   @include max(1150) {
     display: none;
+  }
+  &:hover {
+    color: #252525;
   }
 }
 
@@ -99,6 +113,12 @@
   list-style: none;
 }
 
+.header-top__menu-item--hidden {
+  @include max(1440) {
+    display: none !important;
+  }
+}
+
 .header-top__menu-link {
   font-size: 14px;
   font-weight: 500;
@@ -117,6 +137,10 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+
+  @include max(1150) {
+    order: 100;
+  }
 }
 
 .header-top__btn {
@@ -125,7 +149,7 @@
   align-items: center;
   height: 38px;
   margin-right: 14px;
-  transition: .5s;
+  transition: $transition;
   border-radius: 19px;
 
   &:last-child {
@@ -177,6 +201,89 @@
 //end #header top btns
 //end #TOP
 
+//begin #LANG
+.header-top__lang {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(100% + 20px);
+  margin: auto;
+  cursor: pointer;
+
+  @include max(1440) {
+    position: relative;
+    left: 0;
+    margin: 0 0 0 20px;
+  }
+
+  select + span {
+    display: flex;
+    align-items: center;
+    width: 89px !important;
+    height: 38px;
+    padding: 0 0 0 22px;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 19px;
+    outline: none;
+    background-color: #fff !important;
+    &.ui-selectmenu-button-open::before {
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      width: 9px;
+      height: 5px;
+      margin: auto;
+      content: '';
+      transition: $transition;
+      background-image: url('../img/arr-down.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  .ui-selectmenu-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #252525;
+  }
+  .ui-selectmenu-icon {
+    display: none;
+  }
+}
+
+.ui-selectmenu-menu .lang__menu {
+  z-index: 10;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+
+  .ui-menu-item-wrapper {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 0;
+    padding: 6px 22px 6px 22px;
+    color: #252525;
+    border: none;
+    background-color: #fff;
+    &.ui-state-active {
+      color: $green;
+    }
+  }
+}
+
+//end #LANG
+
 //begin #BOTTOM
 .header-bottom {
   position: fixed;
@@ -190,7 +297,7 @@
   @include max(1150) {
     position: fixed;
     z-index: 100;
-    top: 58px;
+    top: 62px;
     left: 0;
     display: none;
     overflow: auto;
@@ -242,6 +349,12 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .header-bottom-menu__link {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
   &:hover {
     .submenu {
       pointer-events: auto;
@@ -260,6 +373,7 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 17px;
+  position: relative;
   padding: 22px 0;
   cursor: pointer;
   white-space: nowrap;
@@ -269,8 +383,30 @@
   @include max(1150) {
     padding: 20px 0;
   }
+  &::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    background-color: #fff;
+
+    @include max(1150) {
+      display: none;
+    }
+  }
+  &::before {
+    top: 0;
+  }
+
   &:hover {
     color: rgba(255, 255, 255, .7);
+    &::before {
+      width: 100%;
+    }
     & + .header-bottom-menu__btn {
       transform: rotate(180deg);
 
@@ -292,12 +428,12 @@
   height: 12px;
   margin-left: 5px;
   cursor: pointer;
-  transition: .5s;
+  transition: $transition;
   svg {
     fill: #fff;
     width: 12px;
     height: 8px;
-    transition: .5s;
+    transition: $transition;
   }
 }
 

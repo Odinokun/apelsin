@@ -6,7 +6,7 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 48px;
-  transition: .5s;
+  transition: $transition;
   pointer-events: none;
   opacity: 0;
   background-color: $brand;
@@ -60,11 +60,16 @@
     cursor: pointer;
     user-select: none;
   }
+  &:hover {
+    span {
+      color: #fff;
+    }
+  }
   span {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
-    transition: .5s;
+    transition: $transition;
     color: rgba(255, 255, 255, .7);
 
     @include max(1150) {
@@ -72,33 +77,6 @@
       line-height: 20px;
       color: #fff;
     }
-  }
-}
-
-.submenu-left__title.active {
-  .submenu-left__title-btn {
-    transform: rotate(180deg);
-  }
-}
-
-.submenu-left__title-btn {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 23px;
-  height: 12px;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: .5s;
-
-  @include max(1150) {
-    display: flex;
-  }
-  svg {
-    fill: #fff;
-    width: 10px;
-    height: 6px;
-    transition: .5s;
   }
 }
 
@@ -115,7 +93,6 @@
   padding: 0;
 
   @include max(1150) {
-    display: none;
     padding-left: 20px;
   }
 }

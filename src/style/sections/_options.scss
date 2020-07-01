@@ -55,8 +55,9 @@
 }
 
 .options-item--pic {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+
   @include max(767) {
     display: none;
   }
@@ -74,7 +75,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  transition: .5s;
+  transition: $transition;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -100,7 +101,7 @@
     width: 58px;
     height: 58px;
     margin-bottom: 10px;
-    transition: .5s;
+    transition: $transition;
   }
 }
 
@@ -118,7 +119,7 @@
   position: relative;
   display: block;
   margin-bottom: 10px;
-  transition: .5s;
+  transition: $transition;
   color: rgba(255, 255, 255, .7);
 
   @include responsive-font(18, 14);
