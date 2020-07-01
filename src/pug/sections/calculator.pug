@@ -7,10 +7,17 @@ form.calculator-form
       .calculator
         //begin calculator-item-region
         .calculator__item.calculator-item.calculator-item-region
-          h4.calculator-item__title Регион
+          h4.calculator-item__title Выберите город
           .calculator-item-region__city
             +svg('marker')
-            span Большая Александровка
+            select#region-select
+              option Киев
+              option Бровары
+              option Чубинское
+              option Гора
+              option(selected) Большая Александровка
+              option Малая Александровка
+              option Безугловка
         //end calculator-item-region
 
         //begin calculator-item-connected
@@ -37,8 +44,8 @@ form.calculator-form
 
         //begin calculator-item-internet
         .calculator__item.calculator-item.calculator-item-internet
-          h4.calculator-item__title Интернет (Мбит/с)
-          .calculator-item-internet__range-slider#calculator-item-internet__range-slider
+          h4.calculator-item__title Скорость интернета (Мбит/с)
+          .calculator-item-internet__range-slider#calculator-item-internet__range-slider(data-internet='[40, 60, 80, 100, 200, 300, 400, 1000]')
           .calculator-item-internet__range-slider-scale
             span 40
             span 60
@@ -47,26 +54,28 @@ form.calculator-form
             span 1000
           .calculator-item-internet__static
             label.calculator-item-internet__static-label
-              input(type='checkbox' checked).calculator-item-internet__static-checkbox
+              input(type='checkbox' checked).calculator-item-internet__static-checkbox#calculator-item-internet__static-checkbox
               span.calculator-item-internet__static-text Статический IP-адрес
-            .calculator-item-internet__static-info
+            .calculator-item-internet__static-info.tooltip-wrap
               +svg('question')
-              span.calculator-item-internet__static-tooltip Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+              .tooltip
+                p Статический (неизменяемый, постоянный) IP-адрес – это уникальный сетевой адрес компьютера или другого устройства, который назначается либо автоматически, либо вручную, и который больше не может быть присвоен никаким другим устройствам.
+                p Среди преимуществ статического IP-адреса: высокая защищенность, постоянный адрес при использовании IP-телефонии и других сервисов, быстрая идентификация, создание собственных серверов… и многие другие.
         //end calculator-item-internet
 
         //begin calculator-item-period
         .calculator__item.calculator-item.calculator-item-period
-          h4.calculator-item__title Период
+          h4.calculator-item__title Период оплаты
           .calculator-item-period__list
             label.calculator-item-period__label
               input(type='radio' name='period').calculator-item-period__input
               span.calculator-item-period__text Ежемесячная оплата
             label.calculator-item-period__label
-              input(type='radio' name='period' checked).calculator-item-period__input
-              span.calculator-item-period__text 6 месяцев <i>- 14%</i>
-            label.calculator-item-period__label
               input(type='radio' name='period').calculator-item-period__input
-              span.calculator-item-period__text 3 месяца <i>- 17%</i>
+              span.calculator-item-period__text 3 месяца <i>- 14%</i>
+            label.calculator-item-period__label
+              input(type='radio' name='period' checked).calculator-item-period__input
+              span.calculator-item-period__text 6 месяцев <i>- 17%</i>
             label.calculator-item-period__label
               input(type='radio' name='period').calculator-item-period__input
               span.calculator-item-period__text 12 месяцев <i>- 20%</i>
@@ -74,10 +83,10 @@ form.calculator-form
 
         //begin calculator-item-tv
         .calculator__item.calculator-item.calculator-item-tv
-          h4.calculator-item__title Телевидение (каналы)
+          h4.calculator-item__title Добавьте телеканалы
           .calculator-item-tv__list
             label.calculator-item-tv__label
-              input(type='radio' name='tv').calculator-item-tv__input
+              input(type='radio' name='tv' value='0').calculator-item-tv__input
               .calculator-item-tv__info
                 .calculator-item-tv__price
                   span 60
@@ -85,7 +94,7 @@ form.calculator-form
                   span Бесплатное ТВ<br><strong>14 HD</strong>
 
             label.calculator-item-tv__label
-              input(type='radio' name='tv').calculator-item-tv__input
+              input(type='radio' name='tv' value='50').calculator-item-tv__input
               .calculator-item-tv__info
                 .calculator-item-tv__price
                   span 221
@@ -93,7 +102,7 @@ form.calculator-form
                   span Базовый<br><strong>57 HD</strong><i>5000 фильмов</i>
 
             label.calculator-item-tv__label
-              input(type='radio' name='tv' checked).calculator-item-tv__input
+              input(type='radio' name='tv' value='139' checked).calculator-item-tv__input
               .calculator-item-tv__info
                 .calculator-item-tv__price
                   span 243
@@ -111,18 +120,27 @@ form.calculator-form
           a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-02.jpg")')
             h3.calculator-banner__title Оптика в квартиру<br>— 1 Гбит/с
       //end calculator-banners
-
-
     //end calculator-form__left
 
     //begin calculator-form__right
     .calculator-form__right.calculator-form-right
       //begin calculator-form-right__header
       .calculator-form-right__header
-        h2.calculator-form-right__header-title 100 Мбит/с
+        h2.calculator-form-right__header-title#calculator-form-right__header-title 100 Мбит/с
         .calculator-form-right__header-info
           span.calculator-form-right__header-term 6 месяцев
-          span.calculator-form-right__header-sale (скидка 14%)
+          span.calculator-form-right__header-sale.tooltip-wrap (скидка 14%)
+            .tooltip.tooltip--light.calculator-form-right__header-tooltip
+              .calculator-form-right__header-tooltip-top
+                span Скидка
+                span Период
+                span Экономия
+              .calculator-form-right__header-tooltip-bottom
+                span 54 ₴/мес.
+                span.multiplication &#215;
+                span 6 месяцев
+                span.equally
+                span.highlight 120 ₴
       //end calculator-form-right__header
 
       //begin calculator-form-right__item
@@ -138,9 +156,10 @@ form.calculator-form
         .calculator-form-right__row
           .calculator-form-right__row-item
             span Внешний IP
-            .calculator-item-internet__static-info
+            .calculator-item-internet__static-info.tooltip-wrap
               +svg('question')
-              span.calculator-item-internet__static-tooltip Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+              .tooltip
+                p Получите доступ к 185 каналам ТВ и 10 000 фильмам, превратив телевизор в главный центр развлечений в доме + смотрите ТВ на планшете, компьютере, смартфоне
 
         .calculator-form-right__row
           .calculator-form-right__row-item
@@ -153,7 +172,7 @@ form.calculator-form
         .calculator-form-right__row
           .calculator-form-right__row-item
             span Статический IP-адрес
-          .calculator-form-right__row-item
+          .calculator-form-right__row-item#calculator-form-right__row-item--static
             span <strong>49 ₴/мес.</strong>
       //end calculator-form-right__item
 
@@ -164,9 +183,10 @@ form.calculator-form
         .calculator-form-right__row
           .calculator-form-right__row-item
             span <strong>Тариф «Премиальный»</strong>
-            .calculator-item-internet__static-info
+            .calculator-item-internet__static-info.tooltip-wrap
               +svg('question')
-              span.calculator-item-internet__static-tooltip Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+              .tooltip
+                p Получите доступ к 185 каналам ТВ и 10 000 фильмам, превратив телевизор в главный центр развлечений в доме + смотрите ТВ на планшете, компьютере, смартфоне
 
           .calculator-form-right__row-item
             span <strong>139 ₴/мес.</strong>
@@ -190,7 +210,7 @@ form.calculator-form
       //begin calculator-form-right__form
       .calculator-form-right__form
         input(placeholder='Ваше имя').calculator-form-right__input
-        input(placeholder='+7 (___) ___-__-__').phone-mask.calculator-form-right__input
+        input(placeholder='+38 (0__) ___-__-__' required).phone-mask.calculator-form-right__input.error
         .calculator-form-right__agree
           span Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
         input(type='submit' value='Отправить заявку').btn.btn--green.calculator-form-right__submit

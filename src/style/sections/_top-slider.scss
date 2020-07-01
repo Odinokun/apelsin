@@ -8,30 +8,39 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 14px;
-    height: 25px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
     margin: auto;
+    cursor: pointer;
 
     @include max(1280) {
       display: none !important;
     }
-    &:hover {
-      svg {
-        fill: $red;
-      }
-    }
+
     svg {
       fill: #fff;
       width: 14px;
       height: 25px;
-      transition: fill .5s;
+      transition: .5s;
     }
   }
   .prev {
     transform: translateX(-613px);
+    &:hover {
+      svg {
+        transform: translateX(-5px);
+      }
+    }
   }
   .next {
     transform: translateX(613px);
+    &:hover {
+      svg {
+        transform: translateX(5px);
+      }
+    }
   }
   .slick-dots {
     bottom: 22px;
