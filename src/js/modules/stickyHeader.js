@@ -7,7 +7,7 @@ module.exports = function () {
     let isScrollDown = newScroll > oldScroll;
     let scrollTop = $(this).scrollTop();
 
-    if (scrollTop >= 100) {
+    if (scrollTop >= 99) {
       document.querySelector('.header-bottom').classList.toggle('scroll-down', isScrollDown);
     }
 

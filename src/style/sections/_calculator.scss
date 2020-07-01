@@ -44,7 +44,7 @@
   cursor: pointer;
   &:hover {
     svg {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
   }
   svg {
@@ -53,15 +53,55 @@
     width: 12px;
     height: 16px;
     margin-right: 8px;
-    transition: transform .5s;
+    transition: .5s;
   }
-  span {
+
+  select + span {
+    padding: 0;
+    border: none !important;
+    outline: none;
+    background: transparent !important;
+    &.ui-selectmenu-button-open {
+      .ui-selectmenu-text {
+        border-bottom: 1px dotted transparent;
+      }
+    }
+    .ui-selectmenu-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 20px;
+      display: inline-block;
+      color: #252525;
+      border-bottom: 1px dotted #252525;
+    }
+    .ui-selectmenu-icon {
+      display: none;
+    }
+  }
+}
+
+.ui-selectmenu-menu .region-select__menu {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  transform: translateX(-30px);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+
+  .ui-menu-item-wrapper {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: normal;
     line-height: 20px;
-    display: inline-block;
+    margin: 0;
+    padding: 6px 30px 6px 30px;
     color: #252525;
-    border-bottom: 1px dotted #252525;
+    border: none;
+    background-color: #fff;
+    &.ui-state-active {
+      color: $green;
+    }
   }
 }
 
@@ -90,7 +130,6 @@
   position: relative;
   display: block;
   padding-right: 64px;
-  cursor: pointer;
 
   @include max(767) {
     padding-right: 40px;
@@ -109,6 +148,11 @@
 .calculator-item-connected__item {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: .5s;
+  &:hover {
+    transform: translateY(-3px);
+  }
   svg {
     fill: #fff;
     width: 47px;
@@ -129,6 +173,7 @@
 }
 
 .calculator-item-connected__label input:checked + .calculator-item-connected__item {
+  pointer-events: none;
   svg {
     stroke: $green;
   }
@@ -149,6 +194,14 @@
   border: none !important;
   border-radius: 3px;
   background: rgba(205, 205, 205, .5);
+  &.active {
+    .ui-slider-handle {
+      background-color: $yellow;
+    }
+    .ui-slider-range {
+      background-color: $yellow;
+    }
+  }
   .ui-slider-handle {
     width: 38px;
     height: 38px;
@@ -205,6 +258,13 @@
 
 .calculator-item-internet__static-label {
   position: relative;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    .calculator-item-internet__static-text::before {
+      border-color: $green;
+    }
+  }
 }
 
 .calculator-item-internet__static-checkbox {
@@ -236,6 +296,7 @@
     width: 20px;
     height: 20px;
     content: '';
+    transition: border-color .5s;
     border: 1px solid #c4c4c4;
   }
 }
@@ -243,36 +304,10 @@
 .calculator-item-internet__static-info {
   position: relative;
   margin-left: 10px;
-  &:hover {
-    .calculator-item-internet__static-tooltip {
-      pointer-events: auto;
-      opacity: 1;
-    }
-  }
   svg {
     fill: #979d9d;
     width: 22px;
     height: 22px;
-  }
-}
-
-.calculator-item-internet__static-tooltip {
-  position: absolute;
-  z-index: 2;
-  bottom: 100%;
-  left: 100%;
-  width: 250px;
-  padding: 15px 20px;
-  transition: opacity .5s;
-  transform: translate(-50%, -10px);
-  pointer-events: none;
-  opacity: 0;
-  border: 1px solid #e1e5e5;
-  border-radius: 5px;
-  background-color: #fff;
-
-  @include max(480) {
-    transform: translate(-100%, -10px);
   }
 }
 
@@ -287,20 +322,14 @@
   position: relative;
   width: 45%;
   margin-bottom: 12px;
+  cursor: pointer;
 
   @include max(680) {
     width: 100%;
-    &:nth-child(1) {
-      order: 1;
-    }
-    &:nth-child(2) {
-      order: 3;
-    }
-    &:nth-child(3) {
-      order: 2;
-    }
-    &:nth-child(4) {
-      order: 4;
+  }
+  &:hover {
+    .calculator-item-period__text::before {
+      border-color: $green;
     }
   }
 }
@@ -339,6 +368,7 @@
     height: 22px;
     margin-right: 10px;
     content: '';
+    transition: .5s;
     border: 1px solid #c4c4c4;
     border-radius: 50%;
   }
@@ -349,6 +379,7 @@
     width: 12px;
     height: 12px;
     content: '';
+    transition: .5s;
     opacity: 0;
     border-radius: 50%;
     background-color: $green;
@@ -375,7 +406,7 @@
 
 .calculator-item-tv__label {
   position: relative;
-  padding-right: 44px;
+  padding-right: 42px;
 
   @include max(680) {
     margin-bottom: 12px;
@@ -402,6 +433,11 @@
   @include max(680) {
     flex-direction: row;
   }
+  &:hover {
+    .calculator-item-tv__price {
+      transform: translateY(-3px);
+    }
+  }
 }
 
 .calculator-item-tv__price {
@@ -412,6 +448,7 @@
   width: 62px;
   height: 38px;
   margin-bottom: 8px;
+  transition: .5s;
   text-align: center;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
@@ -440,6 +477,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
+    padding-right: 4px;
     user-select: none;
     color: #252525;
   }
@@ -454,6 +492,7 @@
 }
 
 .calculator-item-tv__input:checked + .calculator-item-tv__info {
+  pointer-events: none;
   .calculator-item-tv__price {
     border-color: $green;
     background-color: $green;
@@ -499,6 +538,7 @@
   justify-content: center;
   width: calc(50% - 3px);
   padding: 23px 30px;
+  transition: .5s;
   text-decoration: none;
   border-radius: 5px;
   background-repeat: space;
@@ -511,6 +551,9 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  &:hover {
+    transform: translateY(-3px);
   }
 }
 
@@ -592,6 +635,58 @@
   line-height: 17px;
   padding: 0 4px;
   color: #ec6707;
+}
+
+.calculator-form-right__header-tooltip-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  span {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px;
+    text-align: center;
+    color: #979d9d;
+    &:nth-child(1) {
+      padding-left: 13px;
+    }
+    &:nth-child(2) {
+      padding-left: 20px;
+    }
+  }
+}
+
+.calculator-form-right__header-tooltip-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #252525;
+    svg {
+      width: 11px;
+      height: 11px;
+
+      stroke: #252525;
+      stroke-width: 1px;
+    }
+    &.multiplication {
+      width: 7px;
+    }
+    &.equally {
+      display: block;
+      width: 11px;
+      height: 4px;
+      border-top: 1px solid #252525;
+      border-bottom: 1px solid #252525;
+    }
+    &.highlight {
+      color: #d80808;
+    }
+  }
 }
 
 //end #right header
@@ -715,6 +810,9 @@
   background: #fff;
 
   @include placeholder-color(#979d9d);
+  &:focus {
+    border-color: #979d9d;
+  }
 }
 
 .calculator-form-right__agree {
