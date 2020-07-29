@@ -16,7 +16,7 @@ module.exports = function() {
       if(steps[ui.value] > 100) {
 
         $(this).slider("value", 7); //хак, что бы ползунок перепрыгивал в конец
-        $(this).addClass('active'); //изменяю цвет при максимальном значении
+        //$(this).addClass('active'); //изменяю цвет при максимальном значении
         //выводим максимальное значение массива справа в баннере
         $('#calculator-form-right__header-title').html(steps[steps.length - 1] + ' Мбит/с');
 
