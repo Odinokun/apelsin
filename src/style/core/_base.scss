@@ -1,3 +1,7 @@
+:root {
+  --animate-duration: .7s;
+}
+
 *,
 *::before,
 *::after {
@@ -42,7 +46,7 @@ p {
 }
 
 a {
-  transition: .5s;
+  transition: $transition;
   text-decoration: none;
   color: $link;
   &:hover {
@@ -94,9 +98,32 @@ textarea {
   resize: none;
 }
 
+.input-required-wrap {
+  position: relative;
+  input {
+    width: 100%;
+  }
+}
+
+.input-required-label {
+  display: none;
+  overflow: hidden;
+  margin-bottom: 8px;
+  &.active {
+    display: block;
+  }
+  span {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px;
+    display: block;
+    color: #d80808;
+  }
+}
+
 input.error,
 textarea.error {
-  border-color: #D80808 !important;
+  border-color: #d80808 !important;
 }
 
 svg {
@@ -168,7 +195,7 @@ svg {
   height: 52px;
   padding: 10px 40px;
   cursor: pointer;
-  transition: .5s;
+  transition: $transition;
   text-align: center;
   white-space: nowrap;
   border-radius: 26px !important;
@@ -176,12 +203,11 @@ svg {
 
 .btn--grey {
   color: #252525;
-  border: 1px solid #979d9d;
+  border: 1px solid rgba(151, 157, 157, .5);
   background-color: transparent;
   &:hover {
-    color: #fff;
-    border-color: $green;
-    background-color: $green;
+    color: #252525;
+    border: 1px solid #979d9d;
   }
 }
 
@@ -190,9 +216,8 @@ svg {
   border: 1px solid rgba(255, 255, 255, .3);
   background-color: transparent;
   &:hover {
-    color: $brand;
+    color: #fff;
     border-color: #fff;
-    background-color: #fff;
   }
 }
 
@@ -205,4 +230,12 @@ svg {
     border-color: $green-hov;
     background-color: $green-hov;
   }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.ui-selectmenu-open {
+  z-index: 200;
 }

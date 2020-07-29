@@ -1,12 +1,12 @@
 module.exports = function () {
 
   //begin tooltip
-  $(window).on('load', function () {
+  $(document).on('ready', function () {
     let tooltip = $('.tooltip');
 
     let windowWidth = $(window).width();//ширина окна
     let tooltipLeft = $(tooltip).offset().left;//отступ слева
-    let tooltipWidth = $(tooltip).outerWidth();//штрина тултипа
+    let tooltipWidth = $(tooltip).outerWidth();//ширина тултипа
     //отступ справа
     let tooltipRight = windowWidth - tooltipLeft - tooltipWidth;
 

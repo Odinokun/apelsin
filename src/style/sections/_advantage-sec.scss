@@ -114,6 +114,17 @@
   }
 }
 
+.advantage-sec__body-hidden {
+  display: none;
+  margin-bottom: 60px;
+  padding-top: 10px;
+
+  @include max(767) {
+    margin-bottom: 40px;
+    padding-top: 0;
+  }
+}
+
 .advantage-sec__body-footer {
   display: flex;
   justify-content: center;
@@ -129,7 +140,7 @@
 .advantage-sec__body-btn {
   &:hover {
     svg {
-      fill: #fff;
+      fill: #252525;
     }
   }
   svg {
@@ -138,7 +149,7 @@
     width: 10px;
     height: 6px;
     margin-left: 10px;
-    transition: .5s;
+    transition: $transition;
   }
 }
 

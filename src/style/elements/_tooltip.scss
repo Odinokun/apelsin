@@ -13,7 +13,7 @@
 
 .tooltip {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   line-height: 17px;
   position: absolute;
@@ -22,8 +22,8 @@
   width: 290px;
   margin-left: -145px;
   padding: 17px 20px;
-  transition: .5s;
-  text-align: center;
+  transition: $transition;
+  text-align: left;
   pointer-events: none;
   opacity: 0;
   color: #fff;

@@ -14,6 +14,7 @@
   }
   .slick-track {
     display: flex;
+    padding-top: 3px;
   }
   .slick-dots {
     bottom: -35px;
@@ -28,7 +29,7 @@
       height: 10px;
       margin: 0 10px;
       cursor: pointer;
-      transition: .5s;
+      transition: $transition;
       border: 2px solid #c8c8c8;
       border-radius: 50%;
       background-color: transparent;
@@ -44,16 +45,12 @@
   overflow: hidden;
   flex-direction: column;
   height: auto;
-  //width: calc(33.33% - 20px);
   margin: 0 15px;
+  transition: $transition;
   text-decoration: none;
   border-radius: 5px;
   &:hover {
-    .news-sec-item__pic {
-      img {
-        transform: scale(1.05);
-      }
-    }
+    transform: translateY(-3px);
   }
 }
 
@@ -65,7 +62,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    transition: .5s;
+    transition: $transition;
 
     object-fit: cover;
     object-position: 50% 50%;
