@@ -1,7 +1,12 @@
 module.exports = function () {
 
   //begin tooltip
-  $(document).on('ready', function () {
+  $('.tooltip-wrap').hover(function () {
+    tooltipPosition();
+  });
+
+
+  function tooltipPosition() {
     let tooltip = $('.tooltip');
 
     let windowWidth = $(window).width();//ширина окна
@@ -10,13 +15,14 @@ module.exports = function () {
     //отступ справа
     let tooltipRight = windowWidth - tooltipLeft - tooltipWidth;
 
-    if (tooltipRight < 20) {
-      $(tooltip).offset({left: windowWidth - tooltipWidth - 20});
-    }
     if (tooltipLeft < 20) {
       $(tooltip).offset({left: 20});
+    } else if (tooltipRight < 20) {
+      $(tooltip).offset({right: windowWidth - tooltipWidth - 20});
     }
-  });
+  }
+
+  tooltipPosition();
   //end tooltip
 
 };

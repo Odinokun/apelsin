@@ -21,6 +21,9 @@ $(function() {
   // begin Slick slider
   require('./modules/slick')();
 
+  // begin Popups
+  require('./modules/popup')();
+
   // begin Sticky header
   require('./modules/stickyHeader')();
 
@@ -32,5 +35,6 @@ $(function() {
 
   // begin calculator
   // require('./modules/calc')();
+  require('./modules/calc-open-hide')();
 
 });

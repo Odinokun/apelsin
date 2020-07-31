@@ -304,6 +304,7 @@
     width: 100%;
     height: calc(100vh - 58px);
     transition: none;
+    background-color: #fff;
   }
 
   &.scroll-down {
@@ -340,11 +341,13 @@
 
   @include max(1150) {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);;
+    border-bottom: 1px solid rgba(57, 57, 87, .1);
   }
 }
 
 .header-bottom-menu__item--parent {
+  cursor: pointer;
+
   @include max(1150) {
     display: flex;
     flex-wrap: wrap;
@@ -355,6 +358,35 @@
       display: none;
     }
   }
+
+  &:hover {
+    .header-bottom-menu__link {
+      color: rgba(255, 255, 255, .7);
+
+      @include max(1150) {
+        color: #252525;
+      }
+
+      &::before {
+        width: 100%;
+      }
+      & + .header-bottom-menu__btn {
+        transform: rotate(180deg);
+
+        @include max(1150) {
+          transform: rotate(0);
+        }
+        svg {
+          fill: rgba(255, 255, 255, .7);
+
+          @include max(1150) {
+            fill: #252525;
+          }
+        }
+      }
+    }
+  }
+
   &:hover {
     .submenu {
       pointer-events: auto;
@@ -382,6 +414,7 @@
 
   @include max(1150) {
     padding: 20px 0;
+    color: #252525;
   }
   &::before {
     position: absolute;
@@ -401,23 +434,6 @@
   &::before {
     top: 0;
   }
-
-  &:hover {
-    color: rgba(255, 255, 255, .7);
-    &::before {
-      width: 100%;
-    }
-    & + .header-bottom-menu__btn {
-      transform: rotate(180deg);
-
-      @include max(1150) {
-        transform: rotate(0);
-      }
-      svg {
-        fill: rgba(255, 255, 255, .7);
-      }
-    }
-  }
 }
 
 .header-bottom-menu__btn {
@@ -429,11 +445,20 @@
   margin-left: 5px;
   cursor: pointer;
   transition: $transition;
+  pointer-events: none;
+
+  @include max(1150) {
+    pointer-events: auto;
+  }
   svg {
     fill: #fff;
     width: 12px;
     height: 8px;
     transition: $transition;
+
+    @include max(1150) {
+      fill: #252525;
+    }
   }
 }
 
@@ -462,8 +487,16 @@
   font-weight: 500;
   line-height: 20px;
   color: #fff;
+
+  @include max(1150) {
+    color: #252525;
+  }
   &:hover {
     color: rgba(255, 255, 255, .7);
+
+    @include max(1150) {
+      color: #252525;
+    }
   }
 }
 
