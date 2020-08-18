@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   display: none;
-  background-color: #636378;
+  background-color: rgba(57, 57, 87, .7);
 }
 
 .popup {
@@ -39,17 +39,16 @@
   height: 40px;
   cursor: pointer;
 
-  will-change: transform;
   &:hover {
     svg {
-      transform: rotate(360deg);
+      fill: darken(#c3c4c5, 20%);
     }
   }
   svg {
     fill: #c3c4c5;
     width: 20px;
     height: 20px;
-    transition: transform $transition;
+    transition: fill $transition;
   }
 }
 

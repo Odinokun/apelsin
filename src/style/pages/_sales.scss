@@ -1,0 +1,153 @@
+.sales-tab__header {
+  display: flex;
+  margin-bottom: 50px;
+
+  @include max(767) {
+    margin-bottom: 30px;
+  }
+}
+
+.sales-tab__btn {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #979d9d;
+  border-bottom: 2px solid #979d9d;
+  &.active {
+    font-weight: bold;
+    pointer-events: none;
+    color: $text;
+    border-bottom: 2px solid $text;
+  }
+}
+
+.sales-tab__body {
+  display: none;
+  &.active {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.sales-item {
+  overflow: hidden;
+  width: calc(50% - 15px);
+  margin-bottom: 30px;
+  border: 1px solid rgba(151, 157, 157, .2);
+  border-radius: 5px;
+  background-color: #fff;
+
+  @include max(767) {
+    width: 100%;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.sales-item__inn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sales-item__pic {
+  overflow: hidden;
+  border-radius: 5px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.sales-item__descr {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 30px 30px;
+
+  flex-grow: 1;
+}
+
+.sales-item__title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  margin-bottom: 10px;
+  color: #252525;
+}
+
+.sales-item__text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 26px;
+  color: #252525;
+}
+
+.sales-item__footer {
+  display: flex;
+  align-items: baseline;
+  margin-top: auto;
+}
+
+.sales-item__footer-descr {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #979d9d;
+}
+
+.sales-item__footer-term {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  padding-left: 6px;
+  color: #252525;
+}
+
+.sales-tab__more {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  padding-top: 20px;
+
+  @include max(767) {
+    margin-bottom: 40px;
+    padding-top: 10px;
+  }
+}
+
+.sales-tab__more-btn {
+  min-width: 240px;
+  &.active {
+    svg {
+      transform: rotate(180deg);
+    }
+    .sales-tab__more-btn--new {
+      display: block;
+    }
+    .sales-tab__more-btn--old {
+      display: none;
+    }
+  }
+  &:hover {
+    svg {
+      fill: #252525;
+    }
+  }
+  svg {
+    flex: none;
+    fill: #252525;
+    width: 10px;
+    height: 6px;
+    margin-left: 10px;
+    transition: $transition;
+  }
+}
+
+.sales-tab__more-btn--new {
+  display: none;
+}

@@ -2,10 +2,10 @@ module.exports = function() {
 
   //begin open-close menu
   $('.burger input').on('click', function () {
-    $('.header-bottom').slideToggle();
+    $('.header-bottom').slideToggle(100);
     //скрываем подменю
     $('.header-bottom-menu__item--parent').removeClass('active');
-    $('#submenu').slideUp();
+    $('#submenu').slideUp(100);
   });
   //end open-close menu
 
@@ -14,7 +14,7 @@ module.exports = function() {
     let thisParent = $(this).parents('.header-bottom-menu__item--parent');
 
     $(thisParent).toggleClass('active');
-    $('#submenu').slideToggle();
+    $('#submenu').slideToggle(100);
   });
   //end open-close menu
 

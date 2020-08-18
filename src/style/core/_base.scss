@@ -61,10 +61,28 @@ ul {
   }
 }
 
-ul {
+.custom-list {
+  margin: 0 0 20px 0;
+  padding: 0;
   li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+    color: #252525;
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      content: '';
+      border-radius: 50%;
+      background-color: $green;
+    }
   }
 }
 

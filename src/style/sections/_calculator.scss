@@ -161,10 +161,9 @@
   }
   svg {
     fill: #fff;
+    stroke: #252525;
     margin-right: 15px;
     transition: $transition;
-
-    stroke: #252525;
   }
   span {
     font-size: 16px;
@@ -297,19 +296,22 @@
     }
   }
 }
+
 .calculator-item-internet__range-slider-scale-min,
-.calculator-item-internet__range-slider-scale-max{
+.calculator-item-internet__range-slider-scale-max {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
   position: absolute;
   top: -49px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF !important;
+  color: #fff !important;
 }
-.calculator-item-internet__range-slider-scale-min{
+
+.calculator-item-internet__range-slider-scale-min {
   left: 10px;
 }
-.calculator-item-internet__range-slider-scale-max{
+
+.calculator-item-internet__range-slider-scale-max {
   right: 10px;
 }
 
@@ -847,10 +849,10 @@
       font-size: 14px;
     }
     svg {
+      stroke: #252525;
       width: 11px;
       height: 11px;
 
-      stroke: #252525;
       stroke-width: 1px;
     }
     &.multiplication {

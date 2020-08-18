@@ -15,6 +15,12 @@ $(function() {
   // begin menu & submenu
   require('./modules/menu')();
 
+  // begin tab
+  require('./modules/tab')();
+
+  // begin sales page show/close sale items
+  require('./modules/salesShowMore')();
+
   // begin tooltip
   require('./modules/tooltip')();
 
@@ -36,5 +42,8 @@ $(function() {
   // begin calculator
   // require('./modules/calc')();
   require('./modules/calc-open-hide')();
+
+  // begin sale countdown
+  require('./modules/countdown')();
 
 });
