@@ -42,6 +42,7 @@ $(function() {
   // begin calculator
   // require('./modules/calc')();
   require('./modules/calc-open-hide')();
+  require('./modules/fixedCalc')();
 
   // begin sale countdown
   require('./modules/countdown')();

@@ -914,6 +914,99 @@
 
 //end #result
 
+//begin #footer
+.calculator-form-right__check-footer {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px 10px 13px;
+  transition: $transition;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+  .fixed{
+  transform: translateY(0);
+
+  }
+}
+.calculator-form-right__check-footer-item {
+  padding: 3px 40px;
+  border-right: 1px solid #ececf2;
+
+  @include max(680) {
+    padding: 3px 0px;
+  }
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 7px;
+    &:first-child {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 17px;
+      display: inline-block;
+      margin-bottom: 3px;
+      text-align: center;
+      color: #979d9d;
+      @include max(374) {
+        font-size: 12px;
+      }
+    }
+    &:last-child {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 17px;
+      text-align: center;
+      color: #252525;
+      @include max(374) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.calculator-form-right__check-footer-item--price {
+  position: relative;
+  margin-left: 50px;
+  padding: 3px 0 3px 40px;
+  border: none;
+
+  @include max(680) {
+    margin-left: auto;
+  }
+  span {
+    display: inline-block;
+    &:first-child {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 44px;
+      padding-right: 13px;
+      text-align: right;
+      color: #252525;
+      @include max(374) {
+        font-size: 30px;
+      }
+    }
+    &:last-child {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      position: absolute;
+      top: 0;
+      right: -13px;
+      text-align: right;
+      color: #252525;
+    }
+  }
+}
+//end #footer
+
+
 //begin #form
 .calculator-form-right__input {
   font-family: 'Montserrat', sans-serif;
