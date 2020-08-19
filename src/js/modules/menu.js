@@ -18,4 +18,19 @@ module.exports = function() {
   });
   //end open-close menu
 
+  //begin open-close footer-mobile menu
+  $('.footer-item__btn-contacts').on('click', function (e) {
+    e.preventDefault();
+    $('.footer-item__menu-contacts-list-close, .footer-item__menu-contacts-list').addClass('active');
+  });
+
+  $('.footer-item__menu-contacts-list-close').on('click', function (e) {
+    e.preventDefault();
+    $('.footer-item__menu-contacts-list-close, .footer-item__menu-contacts-list').removeClass('active');
+  });
+  //end open-close footer-mobile menu
+
+
+
+
 };

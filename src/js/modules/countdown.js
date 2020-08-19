@@ -32,27 +32,30 @@ module.exports = function () {
       seconds = "0" + seconds;
     }
 
-    // Display the result in the element with id="demo"
-    // document.getElementById("sale-counter__body").innerHTML = days + "дни " + hours + "часы " + minutes + "минуты " + seconds + "секунды ";
-    document.getElementById("sale-counter__body").innerHTML = "<div class='sale-counter__item sale-counter__item--days'><span>" + days + "</span><span>Дни</span></div>" +
-      "<div class='sale-counter__item sale-counter__item--hours'><span>" + hours + "</span><span>Часы</span></div>" +
-      "<div class='sale-counter__item sale-counter__item--minutes'><span>" + minutes + "</span><span>Минуты</span></div>" +
-      "<div class='sale-counter__item sale-counter__item--seconds'><span>" + seconds + "</span><span>Секунды</span></div>";
+    let saleCounter = document.querySelector("#sale-counter__body");
+
+    // Display the result in the element with id="sale-counter__body"
+    if(saleCounter){
+      document.querySelector("#sale-counter__body").innerHTML = "<div class='sale-counter__item sale-counter__item--days'><span>" + days + "</span><span>Дни</span></div>" +
+        "<div class='sale-counter__item sale-counter__item--hours'><span>" + hours + "</span><span>Часы</span></div>" +
+        "<div class='sale-counter__item sale-counter__item--minutes'><span>" + minutes + "</span><span>Минуты</span></div>" +
+        "<div class='sale-counter__item sale-counter__item--seconds'><span>" + seconds + "</span><span>Секунды</span></div>";
+    }
 
     // If the count down is finished, write some text
-    if (distance < 0) {
+    if (distance < 0 && saleCounter) {
       clearInterval(x);
-      document.getElementById("sale-counter__body").innerHTML = "";
+      document.querySelector("#sale-counter__body").innerHTML = "";
     }
 
     //делаем цифры серыми когда они на нуле
-    if(days == 0) {
+    if(days === 0) {
       document.querySelector('.sale-counter__item--days').classList.add('zero');
     }
-    if(days == 0 && hours == 0) {
+    if(days === 0 && hours === 0) {
       document.querySelector('.sale-counter__item--hours').classList.add('zero');
     }
-    if(days == 0 && hours == 0 && minutes == 0) {
+    if(days === 0 && hours === 0 && minutes === 0) {
       document.querySelector('.sale-counter__item--minutes').classList.add('zero');
     }
 

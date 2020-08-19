@@ -22,6 +22,9 @@
     padding-right: 15px;
 
     @include max(880) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       max-width: 100%;
       padding-right: 0;
     }
@@ -47,6 +50,13 @@
   }
   &:nth-child(4) {
     max-width: 253px;
+
+    @include max(880) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
   }
 }
 
@@ -54,6 +64,7 @@
 .footer-item__top {
   @include max(880) {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 23px;
   }
@@ -64,7 +75,7 @@
   margin-bottom: 19px;
 
   @include max(880) {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
   svg {
     flex: none;
@@ -75,7 +86,6 @@
     @include max(880) {
       width: 132px;
       height: 23px;
-      margin-right: 30px;
     }
   }
 }
@@ -84,11 +94,13 @@
   font-size: 14px;
   font-weight: 500;
   display: block;
+  max-width: 170px;
   margin-bottom: 20px;
   color: #fff;
 
   @include max(880) {
     font-size: 10px;
+    max-width: 100%;
     margin-bottom: 0;
   }
 }
@@ -96,6 +108,10 @@
 .footer-item__bottom-list {
   margin: 0 0 20px 0;
   padding: 0;
+
+  @include max(880) {
+    order: 10;
+  }
 }
 
 .footer-item__bottom-item {
@@ -118,6 +134,56 @@
   &:hover {
     opacity: 1;
     color: #fff;
+  }
+}
+
+.footer-item__playmarket {
+  display: block;
+  max-width: 175px;
+  padding: 10px 15px;
+  border: 1px solid rgba(151, 157, 157, .2);
+  border-radius: 3px;
+
+  @include max(880) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 315px;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+}
+
+.footer-item__playmarket-text {
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 15px;
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  color: #fff;
+  border-bottom: 1px solid rgba(151, 157, 157, .2);
+
+  @include max(880) {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px 15px;
+    border-right: 1px solid rgba(151, 157, 157, .2);
+    border-bottom: none;
+  }
+}
+
+.footer-item__playmarket-icon {
+  @include max(880) {
+    flex: none;
+    padding: 10px 15px;
+  }
+  img {
+    display: block;
+    width: 109px;
+    height: 26px;
   }
 }
 
@@ -180,13 +246,96 @@
 //end #ITEM LG
 
 //begin #CONTACTS
+.footer-item__btn-contacts {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  display: none;
+  box-sizing: border-box;
+  height: 32px;
+  transition: $transition;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(151, 157, 157, .5);
+  border-radius: 16px;
+
+  @include max(880) {
+    display: flex;
+  }
+  &:hover {
+    color: #fff;
+    border: 1px solid rgba(151, 157, 157, 1);
+  }
+}
+
+.footer-item__menu-contacts-list-close {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: $transition;
+  pointer-events: none;
+  opacity: 0;
+
+  @include max(880) {
+    display: block;
+  }
+  &:hover {
+    svg {
+      fill: #fff;
+    }
+  }
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  svg {
+    fill: #515151;
+    width: 20px;
+    height: 20px;
+    transition: $transition;
+    opacity: .6;
+  }
+}
+
 .footer-item__menu-contacts-list {
   margin: 0;
   padding: 0;
+
+  @include max(880) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    transition: opacity $transition;
+    pointer-events: none;
+    opacity: 0;
+    background-color: #252525;
+    &.active {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
 }
 
 .footer-item__menu-contacts-item {
   list-style: none;
+
+  @include max(880) {
+    width: 100%;
+    max-width: 260px;
+  }
   &:last-child {
     .footer-item__menu-contacts-link {
       margin-bottom: 0;

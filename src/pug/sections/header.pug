@@ -5,9 +5,9 @@
     .container
       include ../elements/burger
 
-      a(href="#").header-top__logo
+      a(href="/").header-top__logo
         img(src="assets/img/logo.svg" alt="logo")
-      a(href="#").header-top__logo-mobile
+      a(href="/").header-top__logo-mobile
         img(src="assets/img/logo-mob.svg" alt="logo")
       a(href="tel:+3800671111008").header-top__phone +380 (067) 1111-008
       a(href="#").header-top__doit Стать абонентом
@@ -18,11 +18,18 @@
           li.header-top__menu-item
             a(href="#").header-top__menu-link Акции
           li.header-top__menu-item
-            a(href="#").header-top__menu-link Новости
-          li.header-top__menu-item.header-top__menu-item--hidden
-            a(href="#").header-top__menu-link О компании
-          li.header-top__menu-item
             a(href="#").header-top__menu-link Контакты
+          li.header-top__menu-item
+            a(href="#").header-top__menu-link Новости
+          li.header-top__menu-item.header-top__menu-item--parent
+            +svg('3dots')
+            ul.header-top__menu-sublist
+              li.header-top__menu-item
+                a(href="#").header-top__menu-link О компании
+              li.header-top__menu-item
+                a(href="#").header-top__menu-link Вакансии
+              li.header-top__menu-item
+                a(href="#").header-top__menu-link Инструкции
       //end header-top__menu
 
       //begin header-top__btns
@@ -73,9 +80,13 @@
           li.header-bottom-mob-menu__item
             a(href="#").header-bottom-mob-menu__link Новости
           li.header-bottom-mob-menu__item
+            a(href="#").header-bottom-mob-menu__link Контакты
+          li.header-bottom-mob-menu__item
             a(href="#").header-bottom-mob-menu__link О компании
           li.header-bottom-mob-menu__item
-            a(href="#").header-bottom-mob-menu__link Контакты
+            a(href="#").header-bottom-mob-menu__link Вакансии
+          li.header-bottom-mob-menu__item
+            a(href="#").header-bottom-mob-menu__link Инструкции
       //end header-bottom__mob-menu
   //end header__bottom
 //end header

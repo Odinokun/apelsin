@@ -6,7 +6,7 @@
       .footer-item__top
         a(href="/").footer-item__logo
           +svg('footer-logo')
-        span.footer-item__copyright © 2020, Apelsin.Net.<br>Все права защищены.
+        span.footer-item__copyright © 2020, Apelsin.Net. Все права защищены.
       ul.footer-item__bottom-list
         li.footer-item__bottom-item
           a(href="#").footer-item__bottom-link Политика конфиденциальности
@@ -14,6 +14,12 @@
           a(href="#").footer-item__bottom-link Отчет о структуре собственности
         li.footer-item__bottom-item
           a(href="#").footer-item__bottom-link Информация для потребителей
+
+      a(href="#").footer-item__playmarket
+        .footer-item__playmarket-text
+          span Приложение для мобильных устройств
+        .footer-item__playmarket-icon
+          img(src="assets/img/playmarket.svg" alt="picture")
     //end footer-item
 
     //begin footer-item
@@ -25,9 +31,13 @@
         li.footer-item__menu-sm-item
           a(href="#").footer-item__menu-sm-link Новости
         li.footer-item__menu-sm-item
+          a(href="#").footer-item__menu-sm-link Контакты
+        li.footer-item__menu-sm-item
           a(href="#").footer-item__menu-sm-link О компании
         li.footer-item__menu-sm-item
-          a(href="#").footer-item__menu-sm-link Контакты
+          a(href="#").footer-item__menu-sm-link Вакансии
+        li.footer-item__menu-sm-item
+          a(href="#").footer-item__menu-sm-link Инструкции
       //end footer-item__menu-sm-list
     //end footer-item
 
@@ -62,6 +72,9 @@
 
     //begin footer-item
     .footer__item.footer-item
+      a(href="#").btn.footer-item__btn-contacts Связаться с нами
+      .footer-item__menu-contacts-list-close
+        +svg('close')
       //begin footer-item__menu-contacts-list
       ul.footer-item__menu-contacts-list
         li.footer-item__menu-contacts-item
