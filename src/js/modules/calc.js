@@ -11,10 +11,6 @@ module.exports = function() {
     }
   });
 
-  //меняем TV пакет
-  $('.calculator-item-tv__input').on('click', function () {
-
-  });
   //end calculator
 
 };

@@ -44,14 +44,14 @@ form.calculator-form
 
         //begin calculator-item-internet
         .calculator__item.calculator-item.calculator-item-internet
-          h4.calculator-item__title Скорость интернета (Мбит/с)
-          .calculator-item-internet__range-slider#calculator-item-internet__range-slider(data-internet='[40, 60, 80, 100, 200, 300, 400, 1000]')
+          h4.calculator-item__title Интернет (Мбит/с)
+          .calculator-item-internet__range-slider#calculator-item-internet__range-slider(data-internet='[60, 100, 300]')
           .calculator-item-internet__range-slider-scale
-            span 40
-            span 60
-            span 80
-            span 100
-            span 1000
+            span.calculator-item-internet__range-slider-scale-min
+            span.calculator-item-internet__range-slider-scale-max
+            span 60 <i>world</i>
+            span 100 <i>world</i>
+            span 300 <i>world</i>
           .calculator-item-internet__static
             label.calculator-item-internet__static-label
               input(type='checkbox' checked).calculator-item-internet__static-checkbox#calculator-item-internet__static-checkbox
@@ -110,16 +110,21 @@ form.calculator-form
                   span Премиальный<br><strong>89 HD / 3 UHD</strong><i>5000 фильмов</i>
         //end calculator-item-tv
       //end calculator
+        
+      //begin calculator-open-section
+      .calculator__item.calculator-item.calculator-open-section
+        a(href="#").calculator-open-section__btn.btn.btn--green Рассчитать
+      //end calculator-open-section
 
-      //begin calculator-banners
-      .calculator-banners
+      //begin calculator-banners--desktop
+      .calculator-banners.calculator-banners--desktop
         span.calculator-banners__title Возможно вас заинтересует
         .calculator-banners__list
           a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-01.jpg")')
             h3.calculator-banner__title Премиум-<br>подключение
           a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-02.jpg")')
             h3.calculator-banner__title Оптика в квартиру<br>— 1 Гбит/с
-      //end calculator-banners
+      //end calculator-banners--desktop
     //end calculator-form__left
 
     //begin calculator-form__right
@@ -223,9 +228,20 @@ form.calculator-form
             span Поле обязательно для заполнения
         .calculator-form-right__agree
           span Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
-        input(type='submit' value='Отправить заявку').btn.btn--green.calculator-form-right__submit
+        input(type='submit' value='Отправить заявку' data-popup='popup-success').btn.btn--green.popup-open.calculator-form-right__submit
         .calculator-form-right__footer
           span 30 дней гарантии возврата денег
       //end calculator-form-right__form
+
     //end calculator-form__right
+
+    //begin calculator-banners--mobile
+    .calculator-banners.calculator-banners--mobile
+      span.calculator-banners__title Возможно вас заинтересует
+      .calculator-banners__list
+        a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-01.jpg")')
+          h3.calculator-banner__title Премиум-<br>подключение
+        a(href="#").calculator-banner(style='background-image: url("assets/img/bg-calculator-banner-02.jpg")')
+          h3.calculator-banner__title Оптика в квартиру<br>— 1 Гбит/с
+    //end calculator-banners--mobile
 //end calculator-form

@@ -7,11 +7,14 @@
 @import 'elements/submenu';
 @import 'elements/burger';
 @import 'elements/tooltip';
+@import 'elements/popup';
+@import 'elements/breadcrumbs';
 
 @import 'elements/slickBase';
 
 //main section
 @import 'sections/header';
+@import 'sections/page-header';
 @import 'sections/footer';
 
 //index section
@@ -25,3 +28,5 @@
 
 //pages
 @import 'pages/index';
+@import 'pages/sales';
+@import 'pages/sale';

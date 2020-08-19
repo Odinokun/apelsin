@@ -1,0 +1,73 @@
+extends ../_template
+
+mixin sales-item(className, pic, title, text, term)
+  a(href="#" class='sales-tab__item sales-item ' + className)
+    .sales-item__inn
+      .sales-item__pic
+        img(src="assets/img/sales/sale-" + pic + ".jpg" alt="sale")
+      .sales-item__descr
+        h3.sales-item__title #{title}
+        .sales-item__text
+          p #{text}
+        .sales-item__footer
+          span.sales-item__footer-descr Осталось до окончания:
+          span.sales-item__footer-term #{term}
+
+block variables
+  - var title       = 'Акции и программы лояльности | Apelsin.net'
+  - var description = 'Акции и программы лояльности | Apelsin.net'
+  - var ogtitle     = 'Акции и программы лояльности | Apelsin.net'
+
+  - var pageHeaderTitle = 'Акции и программы лояльности'
+  - var breadcrumbs     = 'Акции и программы лояльности'
+
+block content
+  .main-wrap
+    include ../sections/header
+    .page-header
+      .container
+        include ../elements/breadcrumbs/breadcrumbs-sales
+        h2.page-header__title #{pageHeaderTitle}
+
+    //begin content
+    main.main.sales
+      .container
+        //begin sales-tab
+        .sales__tab.sales-tab
+          //begin sales-tab__header
+          .sales-tab__header
+            .sales-tab__btn(data-sale='.sales-tab__body--new') Для новых абонентов
+            .sales-tab__btn.active(data-sale='.sales-tab__body--old') Для действующих абонентов
+          //end sales-tab__header
+
+          //begin sales-tab__body--new
+          .sales-tab__body.sales-tab__body--new
+            +sales-item('', 'new-01', 'Дорогим врачам — бесплатный интернет до конца года', 'Не упусти свой шанс подключить полгода интернета и цифрового телевидения за полцены!', '9 месяцев')
+            +sales-item('', 'new-02', 'Киберпонедельник в Apelsin.Net | Последний день скидок', 'Последний день скидок, успейте получить бонусные месяцы интернета в подарок!', '5 часов')
+            +sales-item('hidden', 'new-02', 'Киберпонедельник в Apelsin.Net | Последний день скидок', 'Последний день скидок, успейте получить бонусные месяцы интернета в подарок!', '5 часов')
+            +sales-item('hidden', 'new-01', 'Дорогим врачам — бесплатный интернет до конца года', 'Не упусти свой шанс подключить полгода интернета и цифрового телевидения за полцены!', '9 месяцев')
+          //end sales-tab__body--new
+
+          //begin sales-tab__body--new
+          .sales-tab__body.sales-tab__body--old.active
+            +sales-item('', 'old-01', 'Приводите друзей', 'После подключения вы и приведенный вами клиент получите на свои лицевые счета бонусы в сумме 250 гривен, которые можно будет потратить на любые услуги от Apelsin.Net', 'бессрочно')
+            +sales-item('', 'old-02', 'Цифровое HD-телевидение от Apelsin.Net - 30 дней бесплатно', 'Просто подключите тариф «HD Премиальный» от провайдера Apelsin.Net – и наслаждайтесь высокой четкостью первые 30 дней абсолютно бесплатно!', '5 часов')
+            +sales-item('hidden', 'old-03', 'Полгода интернета и цифрового телевидения за полцены!', 'Не упусти свой шанс подключить полгода интернета и цифрового телевидения за полцены!', 'акция закончилась')
+            +sales-item('hidden', 'old-04', 'Черная пятница в Apelsin.Net | Скидки 3+1', 'Зима близко. Не упусти свой шанс – запастись интернетом на всю зиму!', 'акция закончилась')
+          //end sales-tab__body--new
+
+          //begin sales-tab__show-more
+          .sales-tab__more
+            .btn.btn--grey.sales-tab__more-btn
+              span.sales-tab__more-btn--old Архивные акции
+              span.sales-tab__more-btn--new Актуальные акции
+              +svg('arr-down')
+          //end sales-tab__show-more
+        //end sales-tab
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts
+    script(src="https://www.google.com/recaptcha/api.js" async defer)

@@ -1,0 +1,72 @@
+extends ../_template
+
+block variables
+  - var title       = 'Киберпонедельник в Apelsin.Net. Последний день скидок | Apelsin.net'
+  - var description = 'Киберпонедельник в Apelsin.Net. Последний день скидок | Apelsin.net'
+  - var ogtitle     = 'Киберпонедельник в Apelsin.Net. Последний день скидок | Apelsin.net'
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'Киберпонедельник в Apelsin.Net. Последний день скидок'
+
+block content
+  .main-wrap
+    include ../sections/header
+    .page-header
+      .container
+        include ../elements/breadcrumbs/breadcrumbs-sale
+        h2.page-header__title Киберпонедельник в Apelsin.Net.<br>Последний день скидок
+
+    //begin content
+    main.main.sale
+      .container
+        .sale__banner
+          img(src="assets/img/sales/sale-lg-01.jpg" alt="picture")
+        h3.sale__title Последний день скидок, успейте получить бонусные месяцы интернета в подарок!
+
+        ul.sale__list.custom-list
+          li.sale__list-item При оплате услуги Интернета за 3 месяца одним платежом, Вы получаете 1 месяц интернета в подарок.
+          li.sale__list-item Начисление бонусного месяца осуществляется в виде пополнения суммы на ваш счёт в размере 1 месяца от текущего тарифного плана.
+          li.sale__list-item Предложение действительно с 00:01 часов 2 декабря по 3 декабря 2019 г., для существующих и новых абонентов компании Apelsin.Net.
+          li.sale__list-item Акционный месяц бесплатного интернета начисляется в течении 1 часа после пополнения.
+          li.sale__list-item Акционное предложение не действует совместно с другой акцией “Скидка за предоплату v2.0”.
+          li.sale__list-item Предложение действительно для физических лиц проживающих в Киеве и Киевской области.
+          li.sale__list-item Количество пополнений — неограниченно.
+
+        //begin sale__count-banner
+        .sale__count-banner.sale-count-banner
+          .sale-count-banner__left
+            h3.sale-count-banner__title Готовы получить эксклюзивное предложение?
+            .sale-count-banner__counter.sale-counter
+              span.sale-counter__header До окончания акции осталось:
+              .sale-counter__body#sale-counter__body
+                .sale-counter__item
+                  span 00
+                  span Дни
+                .sale-counter__item
+                  span 00
+                  span Часы
+                .sale-counter__item
+                  span 00
+                  span Минуты
+                .sale-counter__item
+                  span 00
+                  span Секунды
+            .sale-count-banner__footer Скорость гарантируем — или вернем деньги
+          .sale-count-banner__right
+            .sale-count-banner__check.sale-check
+              .sale-check__old-price 930
+              .sale-check__new-price 768
+              .sale-check__price-descr в месяц
+              .sale-check__speed 100 Мбит/с
+              .sale-check__channel 221 канал
+              .sale-check__channel-descr из них 57 HD-канала + услуга <a href="#">"Кинозал"</a>
+              .sale-check__btn.btn.btn--green Получить скидку в 15%
+              a(href="#").sale-check__custom-link Собрать свой пакет услуг
+
+        //end sale__count-banner
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts
+    script(src="https://www.google.com/recaptcha/api.js" async defer)
