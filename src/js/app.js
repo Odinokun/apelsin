@@ -3,6 +3,9 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
+  // begin no-js
+  require('./modules/noJs')();
+
   // begin phone mask
   require('./modules/maskedinput')();
 
@@ -46,5 +49,8 @@ $(function() {
 
   // begin sale countdown
   require('./modules/countdown')();
+
+  // begin hide/on checkbox in calculator tv section
+  require('./modules/tvCheckboxHideOn')();
 
 });
