@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Apelsin.net</title>
+    <meta name="description" content="Apelsin.net">
+    <!-- begin responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- begin social content&image-->
+    <meta property="og:title" content="Apelsin.net">
+    <!-- begin favicon block start-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.jpg">
+    <!-- begin fonts & style-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- begin custom browsers color-->
+    <meta name="theme-color" content="#393957">
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="main-wrap">
+      <!--begin header-->
+      <div class="header">
+        <!--begin header__top-->
+        <div class="header__top header-top">
+          <div class="container">
+            <!--begin burger-->
+            <div class="burger">
+              <input id="burger" type="checkbox">
+              <label for="burger"></label>
+            </div>
+            <!--end burger--><a class="header-top__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a><a class="header-top__logo-mobile" href="/"><img src="assets/img/logo-mob.svg" alt="logo"></a><a class="header-top__phone" href="tel:+3800671111008">+380 (067) 1111-008</a><a class="header-top__doit" href="#">Стать абонентом</a>
+            <!--begin header-top__menu-->
+            <div class="header-top__menu">
+              <ul class="header-top__menu-list">
+                <li class="header-top__menu-item"><a class="header-top__menu-link" href="#">Акции</a></li>
+                <li class="header-top__menu-item"><a class="header-top__menu-link" href="#">Контакты</a></li>
+                <li class="header-top__menu-item"><a class="header-top__menu-link" href="#">Новости</a></li>
+                <li class="header-top__menu-item header-top__menu-item--parent">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#3dots"></use>
+                  </svg>
+                  <ul class="header-top__menu-sublist">
+                    <li class="header-top__menu-item"><a class="header-top__menu-link" href="#">О компании</a></li>
+                    <li class="header-top__menu-item"><a class="header-top__menu-link" href="#">Вакансии</a></li>
+                    <li class="header-top__menu-item"><a class="header-top__menu-link" href="#">Инструкции</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!--end header-top__menu-->
+            <!--begin header-top__btns-->
+            <div class="header-top__btns"><a class="header-top__btn header-top__btn--pay" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#wallet"></use>
+                </svg><span>Оплата</span></a><a class="header-top__btn header-top__btn--login" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#user"></use>
+                </svg></a></div>
+            <!--end header-top__btns-->
+            <!--begin header-top__lang-->
+            <div class="header-top__lang">
+              <select id="lang">
+                <option selected>Рус</option>
+                <option>Укр</option>
+              </select>
+            </div>
+            <!--end header-top__lang-->
+          </div>
+        </div>
+        <!--end header__top-->
+        <!--begin header__bottom-->
+        <div class="header__bottom header-bottom" id="sticky-header">
+          <div class="container">
+            <!--begin header-bottom__menu-->
+            <div class="header-bottom__menu header-bottom-menu">
+              <ul class="header-bottom-menu__list">
+                <li class="header-bottom-menu__item header-bottom-menu__item--parent"><span class="header-bottom-menu__link">Интернет</span>
+                  <div class="header-bottom-menu__btn">
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#arr-down"></use>
+                    </svg>
+                  </div>
+                  <!--begin submenu-->
+                  <div class="submenu" id="submenu">
+                    <div class="container">
+                      <!--begin submenu__left-->
+                      <div class="submenu__left submenu-left">
+                        <!--begin submenu-left__col-->
+                        <div class="submenu-left__col"><a class="submenu-left__title" href="#"><span>Домашний интернет</span></a>
+                          <ul class="submenu-left__list">
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Киев</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Бровары</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Чубинское</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Гора</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Большая Александровка</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Малая Александровка</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Безугловка</a></li>
+                          </ul>
+                        </div>
+                        <!--end submenu-left__col-->
+                        <!--begin submenu-left__col-->
+                        <div class="submenu-left__col"><a class="submenu-left__title" href="#"><span>Частный сектор</span></a>
+                          <ul class="submenu-left__list">
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Киев</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Бровары</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Чубинское</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Гора</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Большая Александровка</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Малая Александровка</a></li>
+                            <li class="submenu-left__item"><a class="submenu-left__link" href="#">Безугловка</a></li>
+                          </ul>
+                        </div>
+                        <!--end submenu-left__col-->
+                        <!--begin submenu-left__col-->
+                        <div class="submenu-left__col"><a class="submenu-left__title submenu-left__title--link" href="#"><span>Интернет в офис</span></a><a class="submenu-left__title submenu-left__title--link" href="#"><span>Оптика в квартиру</span></a></div>
+                        <!--end submenu-left__col-->
+                      </div>
+                      <!--end submenu__left-->
+                      <!--begin submenu__right-->
+                      <div class="submenu__right submenu-right">
+                        <!--begin submenu-right__col-->
+                        <div class="submenu-right__col">
+                          <h3 class="submenu-right__title">Подключайтесь прямо сейчас</h3>
+                          <h4 class="submenu-right__subtitle">Отправьте заявку и мы подберем для вас оптимальный тариф</h4><a class="btn btn--green submenu-right__btn" href="#">Подключиться</a>
+                        </div>
+                        <!--end submenu-right__col-->
+                      </div>
+                      <!--end submenu__right-->
+                    </div>
+                  </div>
+                  <!--end submenu-->
+                </li>
+                <li class="header-bottom-menu__item"><a class="header-bottom-menu__link" href="#">Телевидение HD</a></li>
+                <li class="header-bottom-menu__item"><a class="header-bottom-menu__link" href="#">Умный дом</a></li>
+                <li class="header-bottom-menu__item"><a class="header-bottom-menu__link" href="#">IP Видеонаблюдение</a></li>
+                <li class="header-bottom-menu__item"><a class="header-bottom-menu__link" href="#">Дополнительные услуги</a></li>
+                <li class="header-bottom-menu__item"><a class="header-bottom-menu__link" href="#">Оборудование</a></li>
+              </ul>
+            </div>
+            <!--end header-bottom__menu-->
+            <!--begin header-bottom__mob-menu-->
+            <div class="header-bottom__mob-menu header-bottom-mob-menu">
+              <ul class="header-bottom-mob-menu__list">
+                <li class="header-bottom-mob-menu__item"><a class="header-bottom-mob-menu__link" href="#">Акции</a></li>
+                <li class="header-bottom-mob-menu__item"><a class="header-bottom-mob-menu__link" href="#">Новости</a></li>
+                <li class="header-bottom-mob-menu__item"><a class="header-bottom-mob-menu__link" href="#">Контакты</a></li>
+                <li class="header-bottom-mob-menu__item"><a class="header-bottom-mob-menu__link" href="#">О компании</a></li>
+                <li class="header-bottom-mob-menu__item"><a class="header-bottom-mob-menu__link" href="#">Вакансии</a></li>
+                <li class="header-bottom-mob-menu__item"><a class="header-bottom-mob-menu__link" href="#">Инструкции</a></li>
+              </ul>
+            </div>
+            <!--end header-bottom__mob-menu-->
+          </div>
+        </div>
+        <!--end header__bottom-->
+      </div>
+      <!--end header-->
+      <!--begin content-->
+      <main class="main index">
+        <!--begin top-slider-->
+        <div class="top-slider">
+          <div class="top-slider__list" id="top-slider__list">
+            <div class="top-slider__item top-slider__item--01" style="background-color: #D3D5E2;">
+              <div class="container">
+                <div class="top-slider__banner">
+                  <picture>
+                    <source srcset="assets/img/bg-top-slider-01.jpg" media="(min-width: 881px)">
+                    <source srcset="assets/img/bg-top-slider-01-880.jpg" media="(min-width: 681px)">
+                    <source srcset="assets/img/bg-top-slider-01-680.jpg" media="(min-width: 320px)"><img src="assets/img/bg-top-slider-01.jpg" alt="pic">
+                  </picture>
+                </div>
+                <div class="top-slider__info top-slider__info--01">
+                  <h3 class="top-slider__subtitle top-slider__subtitle--01">Дорогим лікарям -</h3>
+                  <h2 class="top-slider__title top-slider__title--01">БЕЗКОШТОВНИЙ ІНТЕРНЕТ ДО КІНЦЯ РОКУ!</h2>
+                  <div class="top-slider__hashtag"><span># Підтримую Лікарів</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="top-slider__item top-slider__item--02" style="background-color: #FFCA3C;">
+              <div class="container">
+                <div class="top-slider__banner">
+                  <picture>
+                    <source srcset="assets/img/bg-top-slider-02.jpg" media="(min-width: 881px)">
+                    <source srcset="assets/img/bg-top-slider-02-880.jpg" media="(min-width: 681px)">
+                    <source srcset="assets/img/bg-top-slider-02-680.jpg" media="(min-width: 320px)"><img src="assets/img/bg-top-slider-02.jpg" alt="pic">
+                  </picture>
+                </div>
+                <div class="top-slider__info top-slider__info--02">
+                  <h2 class="top-slider__title top-slider__title--02">Отримай -50% знижки на інтернет з цифровим TБ на півроку!</h2>
+                  <h3 class="top-slider__subtitle top-slider__subtitle--02">Насолоджуйся якісними послугами <strong>лише за 85 ₴ на мicяць</strong></h3>
+                </div>
+                <div class="top-slider__right top-slider__right--02"><span>Підключайся за 1 ₴</span>
+                  <h3 class="top-slider__right-title top-slider__right-title--02">100 Мбіт/с за 85 ₴</h3><span>на місяць</span>
+                </div>
+              </div>
+            </div>
+            <div class="top-slider__item top-slider__item--03" style="background-color: #FF7429;">
+              <div class="container">
+                <div class="top-slider__banner">
+                  <picture>
+                    <source srcset="assets/img/bg-top-slider-03.jpg" media="(min-width: 881px)">
+                    <source srcset="assets/img/bg-top-slider-03-880.jpg" media="(min-width: 681px)">
+                    <source srcset="assets/img/bg-top-slider-03-680.jpg" media="(min-width: 320px)"><img src="assets/img/bg-top-slider-03.jpg" alt="pic">
+                  </picture>
+                </div>
+                <div class="top-slider__info top-slider__info--03">
+                  <h2 class="top-slider__title top-slider__title--03">Отримай -50% знижки на інтернет з цифровим TБ на півроку!</h2>
+                  <h3 class="top-slider__subtitle top-slider__subtitle--03">Насолоджуйся якісними послугами <strong>лише за 150 ₴ в місяць</strong></h3>
+                </div>
+                <div class="top-slider__right top-slider__right--03"><span>Підключайся за 1 ₴</span>
+                  <h3 class="top-slider__right-title top-slider__right-title--03">100 Мбіт/с за 85 ₴</h3><span>на місяць</span>
+                </div>
+              </div>
+            </div>
+            <div class="top-slider__item top-slider__item--04" style="background-color: #000;">
+              <div class="container">
+                <div class="top-slider__banner">
+                  <picture>
+                    <source srcset="assets/img/bg-top-slider-04.jpg" media="(min-width: 881px)">
+                    <source srcset="assets/img/bg-top-slider-04-880.jpg" media="(min-width: 681px)">
+                    <source srcset="assets/img/bg-top-slider-04-680.jpg" media="(min-width: 320px)"><img src="assets/img/bg-top-slider-04.jpg" alt="pic">
+                  </picture>
+                </div>
+                <div class="top-slider__info top-slider__info--04">
+                  <h2 class="top-slider__title top-slider__title--04">Дивись уважно! Багато кІно</h2>
+                  <h3 class="top-slider__subtitle top-slider__subtitle--04">Насолоджуйся улюбленими телеканалами та фільмами цілих <strong>півроку БЕЗКОШТОВНО</strong></h3>
+                  <ul class="top-slider__ul top-slider__ul--04">
+                    <li>246 каналів</li>
+                    <li>70 каналів в Full HD-якості</li>
+                    <li>TV-пакет за ціною приставки</li>
+                    <li>5000 фільмів в HD</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="top-slider__item top-slider__item--05" style="background-color: #FFCA3C;">
+              <div class="container">
+                <div class="top-slider__banner">
+                  <picture>
+                    <source srcset="assets/img/bg-top-slider-05.jpg" media="(min-width: 881px)">
+                    <source srcset="assets/img/bg-top-slider-05-880.jpg" media="(min-width: 681px)">
+                    <source srcset="assets/img/bg-top-slider-05-680.jpg" media="(min-width: 320px)"><img src="assets/img/bg-top-slider-05.jpg" alt="pic">
+                  </picture>
+                </div>
+                <div class="top-slider__info top-slider__info--05">
+                  <h2 class="top-slider__title top-slider__title--05">Отримай -70% знижки</h2>
+                  <h3 class="top-slider__subtitle top-slider__subtitle--05">на підключення інтернету <br>Лише <del>2000</del> <strong>599 ₴</strong></h3>
+                  <p>Залишайся на зв’язку завжди, особливо, коли якість з’єднання - найважливіше.</p>
+                  <h4 class="top-slider__ul-title top-slider__ul-title--05">З Apelsin.Net ви отримаєте:</h4>
+                  <ul class="top-slider__ul top-slider__ul--05">
+                    <li>Захоплюючу надійність зв’язку</li>
+                    <li>Стабільна швидкість навіть у години пік</li>
+                    <li>Телебачення на будь-який смак з 250+ каналам</li>
+                    <li>5000 фільмів в HD + Серіали</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="top-slider__item top-slider__item--06" style="background-color: #242424;">
+              <div class="container">
+                <div class="top-slider__banner">
+                  <picture>
+                    <source srcset="assets/img/bg-top-slider-06.jpg" media="(min-width: 881px)">
+                    <source srcset="assets/img/bg-top-slider-06-880.jpg" media="(min-width: 681px)">
+                    <source srcset="assets/img/bg-top-slider-06-680.jpg" media="(min-width: 320px)"><img src="assets/img/bg-top-slider-06.jpg" alt="pic">
+                  </picture>
+                </div>
+                <div class="top-slider__info top-slider__info--06">
+                  <h2 class="top-slider__title top-slider__title--06"><span>Даруємо</span> бездротову систему безпеки Ajax</h2>
+                  <h3 class="top-slider__subtitle top-slider__subtitle--06"><span>+</span> 2 місяці охорони</h3>
+                  <ul class="top-slider__ul top-slider__ul--06">
+                    <li>Стартовий комплект охоронної<br>системи Ajax</li>
+                    <li>2 місяці послуг охорони від<br>ОА «Партнер»</li>
+                    <li>Підключення оптоволоконним<br>кабелем - 1 Гбіт/c</li>
+                    <li>Безлімітний інтернет - 100 Мбiт/с</li>
+                  </ul>
+                  <div class="top-slider__ps top-slider__ps--06"><span>*</span> Обладнання надається в оренду вартістю 1 гривня строком на 5 років</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end top-slider-->
+        <!--begin calculator-section-->
+        <div class="calculator-section">
+          <!--begin section-header-->
+          <div class="section-header">
+            <div class="container">
+              <h2 class="title title--center">Калькулятор услуг</h2>
+            </div>
+          </div>
+          <!--end section-header-->
+          <!--begin calculator-form-->
+          <form class="calculator-form">
+            <div class="container">
+              <!--begin calculator-form__left-->
+              <div class="calculator-form__left">
+                <!--begin calculator-->
+                <div class="calculator">
+                  <!--begin calculator-item-region-->
+                  <div class="calculator__item calculator-item calculator-item-region">
+                    <h4 class="calculator-item__title">Выберите город</h4>
+                    <div class="calculator-item-region__city">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#marker"></use>
+                      </svg>
+                      <select id="region-select">
+                        <option>Киев</option>
+                        <option>Бровары</option>
+                        <option>Чубинское</option>
+                        <option>Гора</option>
+                        <option selected>Большая Александровка</option>
+                        <option>Малая Александровка</option>
+                        <option>Безугловка</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!--end calculator-item-region-->
+                  <!--begin calculator-item-connected-->
+                  <div class="calculator__item calculator-item calculator-item-connected">
+                    <h4 class="calculator-item__title">Подключение</h4>
+                    <div class="calculator-item-connected__list-wrap">
+                      <div class="calculator-item-connected__list">
+                        <label class="calculator-item-connected__label">
+                          <input type="radio" name="connected" checked>
+                          <div class="calculator-item-connected__item calculator-item-connected__item--building">
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#building"></use>
+                            </svg><span>Домашний<br>интернет</span>
+                          </div>
+                        </label>
+                        <label class="calculator-item-connected__label">
+                          <input type="radio" name="connected">
+                          <div class="calculator-item-connected__item calculator-item-connected__item--house">
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#house"></use>
+                            </svg><span>Частный<br>сектор</span>
+                          </div>
+                        </label>
+                        <label class="calculator-item-connected__label">
+                          <input type="radio" name="connected">
+                          <div class="calculator-item-connected__item calculator-item-connected__item--office">
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#office"></use>
+                            </svg><span>Интернет<br>в офис</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end calculator-item-connected-->
+                  <!--begin calculator-item-internet-->
+                  <div class="calculator__item calculator-item calculator-item-internet">
+                    <h4 class="calculator-item__title">Интернет (Мбит/с)</h4>
+                    <div class="calculator-item-internet__range-slider" id="calculator-item-internet__range-slider" data-internet="[60, 100, 300]"></div>
+                    <div class="calculator-item-internet__range-slider-scale"><span class="calculator-item-internet__range-slider-scale-min"></span><span class="calculator-item-internet__range-slider-scale-max"></span><span>60 <i>world</i></span><span>100 <i>world</i></span><span>300 <i>world</i></span></div>
+                    <div class="calculator-item-internet__static">
+                      <label class="calculator-item-internet__static-label">
+                        <input class="calculator-item-internet__static-checkbox" type="checkbox" checked id="calculator-item-internet__static-checkbox"><span class="calculator-item-internet__static-text">Статический IP-адрес</span>
+                      </label>
+                      <div class="calculator-item-internet__static-info tooltip-wrap">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#question"></use>
+                        </svg>
+                        <div class="tooltip">
+                          <p>Статический (неизменяемый, постоянный) IP-адрес – это уникальный сетевой адрес компьютера или другого устройства, который назначается либо автоматически, либо вручную, и который больше не может быть присвоен никаким другим устройствам.</p>
+                          <p>Среди преимуществ статического IP-адреса: высокая защищенность, постоянный адрес при использовании IP-телефонии и других сервисов, быстрая идентификация, создание собственных серверов… и многие другие.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end calculator-item-internet-->
+                  <!--begin calculator-item-period-->
+                  <div class="calculator__item calculator-item calculator-item-period">
+                    <h4 class="calculator-item__title">Период</h4>
+                    <div class="calculator-item-period__list">
+                      <label class="calculator-item-period__label">
+                        <input class="calculator-item-period__input" type="radio" name="period"><span class="calculator-item-period__text">Ежемесячная оплата</span>
+                      </label>
+                      <label class="calculator-item-period__label">
+                        <input class="calculator-item-period__input" type="radio" name="period"><span class="calculator-item-period__text">3 месяца <i>- 14%</i></span>
+                      </label>
+                      <label class="calculator-item-period__label">
+                        <input class="calculator-item-period__input" type="radio" name="period" checked><span class="calculator-item-period__text">6 месяцев <i>- 17%</i></span>
+                      </label>
+                      <label class="calculator-item-period__label">
+                        <input class="calculator-item-period__input" type="radio" name="period"><span class="calculator-item-period__text">12 месяцев <i>- 20%</i></span>
+                      </label>
+                    </div>
+                  </div>
+                  <!--end calculator-item-period-->
+                  <!--begin calculator-item-tv-->
+                  <div class="calculator__item calculator-item calculator-item-tv">
+                    <h4 class="calculator-item__title">Телевидение</h4>
+                    <div class="calculator-item-tv__list">
+                      <label class="calculator-item-tv__label">
+                        <input class="calculator-item-tv__input" type="radio" name="tv" value="0" checked>
+                        <div class="calculator-item-tv__info">
+                          <div class="calculator-item-tv__price"><span>54</span><span>канала</span></div>
+                          <div class="calculator-item-tv__text"><span>Бесплатное ТВ</span><span>18 HD</span></div>
+                        </div>
+                      </label>
+                      <label class="calculator-item-tv__label">
+                        <input class="calculator-item-tv__input" type="radio" name="tv" value="0">
+                        <div class="calculator-item-tv__info">
+                          <div class="calculator-item-tv__price"><span>157</span><span>каналов</span></div>
+                          <div class="calculator-item-tv__text"><span>Минимальный</span><span>63 HD / 6 UHD</span></div>
+                        </div>
+                      </label>
+                      <label class="calculator-item-tv__label">
+                        <input class="calculator-item-tv__input calculator-item-tv__input--base" type="radio" name="tv" value="0">
+                        <div class="calculator-item-tv__info">
+                          <div class="calculator-item-tv__price"><span>209</span><span>каналов</span></div>
+                          <div class="calculator-item-tv__text"><span>Базовый</span><span>94 HD / 6 UHD<br>5000 фильмов</span></div>
+                        </div>
+                      </label>
+                      <label class="calculator-item-tv__label">
+                        <input class="calculator-item-tv__input calculator-item-tv__input--premium" type="radio" name="tv" value="0">
+                        <div class="calculator-item-tv__info">
+                          <div class="calculator-item-tv__price"><span>224</span><span>канала</span></div>
+                          <div class="calculator-item-tv__text"><span>Премиальный</span><span>101 HD / 6 UHD<br>5000 фильмов</span></div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="calculator-item-tv__footer calculator-item-tv-footer">
+                      <div class="calculator-item-tv-footer__label-left">
+                        <label class="calculator-item-tv-footer__label">
+                          <input class="calculator-item-tv-footer__input" type="checkbox"><span>Амедиатека</span>
+                        </label>
+                        <div class="calculator-item-internet__static-info tooltip-wrap">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#question"></use>
+                          </svg>
+                          <div class="tooltip">
+                            <p>Всегда есть что посмотреть!<br>Новые серии в день выхода и тысячи фильмов на вечер. Без рекламы, в хорошем качестве, с любимой озвучкой или в оригинале.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <label class="calculator-item-tv-footer__static-label" id="calculator-item-tv-footer__static-label">
+                        <input class="calculator-item-tv-footer__static-checkbox" type="checkbox"><span class="calculator-item-tv-footer__static-text">Услуга «Кинозал»</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!--end calculator-item-tv-->
+                </div>
+                <!--end calculator-->
+                <!--begin calculator-open-section-->
+                <div class="calculator__item calculator-item calculator-open-section"><a class="calculator-open-section__btn btn btn--green" href="#">Рассчитать</a></div>
+                <!--end calculator-open-section-->
+                <!--begin calculator-banners--desktop-->
+                <div class="calculator-banners calculator-banners--desktop"><span class="calculator-banners__title">Возможно вас заинтересует</span>
+                  <div class="calculator-banners__list"><a class="calculator-banner" href="#" style="background-image: url(&quot;assets/img/bg-calculator-banner-01.jpg&quot;)">
+                      <h3 class="calculator-banner__title">Премиум-<br>подключение</h3>
+                    </a><a class="calculator-banner" href="#" style="background-image: url(&quot;assets/img/bg-calculator-banner-02.jpg&quot;)">
+                      <h3 class="calculator-banner__title">Оптика в квартиру<br>— 1 Гбит/с</h3>
+                    </a></div>
+                </div>
+                <!--end calculator-banners--desktop-->
+              </div>
+              <!--end calculator-form__left-->
+              <!--begin calculator-form__right-->
+              <div class="calculator-form__right calculator-form-right">
+                <!--begin calculator-form-right__header-->
+                <div class="calculator-form-right__header">
+                  <h2 class="calculator-form-right__header-title" id="calculator-form-right__header-title">100 Мбит/с</h2>
+                  <div class="calculator-form-right__header-info"><span class="calculator-form-right__header-term">6 месяцев</span><span class="calculator-form-right__header-sale">(скидка 14%)</span></div>
+                </div>
+                <!--end calculator-form-right__header-->
+                <!--begin calculator-form-right__item-->
+                <div class="calculator-form-right__item">
+                  <h4 class="calculator-form-right__title"><span>Интернет</span></h4>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span><strong>Тариф «Дом»</strong></span></div>
+                    <div class="calculator-form-right__row-item"><span><strong>257 ₴/мес.</strong></span></div>
+                  </div>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span>Внешний IP</span>
+                      <div class="calculator-item-internet__static-info tooltip-wrap">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#question"></use>
+                        </svg>
+                        <div class="tooltip">
+                          <p>Получите доступ к 185 каналам ТВ и 10 000 фильмам, превратив телевизор в главный центр развлечений в доме + смотрите ТВ на планшете, компьютере, смартфоне</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span>Зарубежный сегмент (300 Мбит/с)</span></div>
+                  </div>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span>Украинский сегмент (до 1000 Мбит/с)</span></div>
+                  </div>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span>Статический IP-адрес</span></div>
+                    <div class="calculator-form-right__row-item" id="calculator-form-right__row-item--static"><span><strong>49 ₴/мес.</strong></span></div>
+                  </div>
+                </div>
+                <!--end calculator-form-right__item-->
+                <!--begin calculator-form-right__item-->
+                <div class="calculator-form-right__item">
+                  <h4 class="calculator-form-right__title"><span>Телевидение</span></h4>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span><strong>Тариф «Премиальный»</strong></span>
+                      <div class="calculator-item-internet__static-info tooltip-wrap">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#question"></use>
+                        </svg>
+                        <div class="tooltip">
+                          <p>Получите доступ к 185 каналам ТВ и 10 000 фильмам, превратив телевизор в главный центр развлечений в доме + смотрите ТВ на планшете, компьютере, смартфоне</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator-form-right__row-item"><span><strong>139 ₴/мес.</strong></span></div>
+                  </div>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span>243 канал (89 HD-канала)</span></div>
+                  </div>
+                  <div class="calculator-form-right__row">
+                    <div class="calculator-form-right__row-item"><span>Услуга «Кинозал»</span></div>
+                  </div>
+                </div>
+                <!--end calculator-form-right__item-->
+                <!--begin calculator-form-right__economy-->
+                <div class="calculator-form-right__economy">
+                  <div class="calculator-form-right__economy-top"><span>Скидка</span><span>Период</span><span>Экономия</span></div>
+                  <div class="calculator-form-right__economy-bottom"><span>54 ₴/мес.</span><span class="multiplication">&#215;</span><span>6 месяцев</span><span class="equally"></span><span class="highlight">120 ₴</span></div>
+                </div>
+                <!--end calculator-form-right__economy-->
+                <!--begin calculator-form-right__result-->
+                <div class="calculator-form-right__result"><span class="calculator-form-right__result-text">Итого:</span><span class="calculator-form-right__result-num">7681</span><span class="calculator-form-right__result-currency">₴</span></div>
+                <!--end calculator-form-right__result-->
+                <!--begin calculator-form-right__form-->
+                <div class="calculator-form-right__form">
+                  <div class="input-required-wrap">
+                    <input class="calculator-form-right__input" placeholder="Ваше имя">
+                    <div class="input-required-label"><span>Поле обязательно для заполнения</span></div>
+                  </div>
+                  <div class="input-required-wrap">
+                    <input class="phone-mask calculator-form-right__input error" placeholder="+38 (0__) ___-__-__">
+                    <div class="input-required-label active"><span>Поле обязательно для заполнения</span></div>
+                  </div>
+                  <div class="calculator-form-right__agree"><span>Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a></span></div>
+                  <input class="btn btn--green popup-open calculator-form-right__submit" type="submit" value="Отправить заявку" data-popup="popup-success">
+                  <div class="calculator-form-right__footer"><span>30 дней гарантии возврата денег</span></div>
+                </div>
+                <!--end calculator-form-right__form-->
+              </div>
+              <!--end calculator-form__right-->
+              <!--begin calculator-form-right__check-footer-->
+              <div class="calculator-form-right__check-footer">
+                <div class="calculator-form-right__check-footer-item"><span>Интернет</span><span>146 ₴/мес.</span></div>
+                <div class="calculator-form-right__check-footer-item"><span>Телевидение</span><span>1420 ₴/мес.</span></div>
+                <div class="calculator-form-right__check-footer-item calculator-form-right__check-footer-item--price"><span>768</span><span>₴</span></div>
+              </div>
+              <!--end calculator-form-right__check-footer-->
+              <!--begin calculator-banners--mobile-->
+              <div class="calculator-banners calculator-banners--mobile"><span class="calculator-banners__title">Возможно вас заинтересует</span>
+                <div class="calculator-banners__list"><a class="calculator-banner" href="#" style="background-image: url(&quot;assets/img/bg-calculator-banner-01.jpg&quot;)">
+                    <h3 class="calculator-banner__title">Премиум-<br>подключение</h3>
+                  </a><a class="calculator-banner" href="#" style="background-image: url(&quot;assets/img/bg-calculator-banner-02.jpg&quot;)">
+                    <h3 class="calculator-banner__title">Оптика в квартиру<br>— 1 Гбит/с</h3>
+                  </a></div>
+              </div>
+              <!--end calculator-banners--mobile-->
+            </div>
+          </form>
+          <!--end calculator-form-->
+        </div>
+        <!--end calculator-section-->
+        <!--begin presents-section-->
+        <div class="presents-section animate__animated fade-in">
+          <!--begin section-header-->
+          <div class="section-header">
+            <div class="container">
+              <h2 class="title title--center">Подарки для клиентов</h2>
+            </div>
+          </div>
+          <!--end section-header-->
+          <div class="container">
+            <div class="presents-slider" id="presents-slider">
+              <div class="presents-slider__item">
+                <div class="presents-slider__pic"><img src="assets/img/presents-01.jpg" alt="picture"></div>
+                <div class="presents-slider__text"><span class="presents-slider__term">Бессрочно</span>
+                  <h3 class="presents-slider__title">250 гривен за каждого нового абонента Apelsin.Net</h3>
+                  <p>Приводите друзей - получайте бонус по 250 гривен за каждого нового абонента, подключенного по вашей рекомендации!</p><a class="btn btn--grey presents-slider__btn" href="#">Получить подарок</a>
+                </div>
+              </div>
+              <div class="presents-slider__item">
+                <div class="presents-slider__pic"><img src="assets/img/presents-02.jpg" alt="picture"></div>
+                <div class="presents-slider__text"><span class="presents-slider__term">С 1 апреля до 30 мая</span>
+                  <h3 class="presents-slider__title">Цифровое HD-телевидение от Apelsin.Net - 30 дней бесплатно</h3>
+                  <p>Просто подключите тариф «HD Премиальный» от провайдера Apelsin.Net – и наслаждайтесь высокой четкостью первые 30 дней абсолютно бесплатно!</p><a class="btn btn--grey presents-slider__btn" href="#">Получить подарок</a>
+                </div>
+              </div>
+              <div class="presents-slider__item">
+                <div class="presents-slider__pic"><img src="assets/img/presents-03.jpg" alt="picture"></div>
+                <div class="presents-slider__text"><span class="presents-slider__term">С 4 июня до 30 декабря</span>
+                  <h3 class="presents-slider__title">Кредит доверия для всех абонентов Apelsin.Net</h3>
+                  <p>В случае, если Вы забыли или не успели оплатить услуги вовремя, а доступ в Интернет очень важно иметь прямо сейчас, то Вы можете активировать услугу «Кредит...</p><a class="btn btn--grey presents-slider__btn" href="#">Получить подарок</a>
+                </div>
+              </div>
+              <div class="presents-slider__item">
+                <div class="presents-slider__pic"><img src="assets/img/presents-01.jpg" alt="picture"></div>
+                <div class="presents-slider__text"><span class="presents-slider__term">Бессрочно</span>
+                  <h3 class="presents-slider__title">250 гривен за каждого нового абонента Apelsin.Net</h3>
+                  <p>Приводите друзей - получайте бонус по 250 гривен за каждого нового абонента, подключенного по вашей рекомендации!</p><a class="btn btn--grey presents-slider__btn" href="#">Получить подарок</a>
+                </div>
+              </div>
+              <div class="presents-slider__item">
+                <div class="presents-slider__pic"><img src="assets/img/presents-02.jpg" alt="picture"></div>
+                <div class="presents-slider__text"><span class="presents-slider__term">С 1 апреля до 30 мая</span>
+                  <h3 class="presents-slider__title">Цифровое HD-телевидение от Apelsin.Net - 30 дней бесплатно</h3>
+                  <p>Просто подключите тариф «HD Премиальный» от провайдера Apelsin.Net – и наслаждайтесь высокой четкостью первые 30 дней абсолютно бесплатно!</p><a class="btn btn--grey presents-slider__btn" href="#">Получить подарок</a>
+                </div>
+              </div>
+              <div class="presents-slider__item">
+                <div class="presents-slider__pic"><img src="assets/img/presents-03.jpg" alt="picture"></div>
+                <div class="presents-slider__text"><span class="presents-slider__term">С 4 июня до 30 декабря</span>
+                  <h3 class="presents-slider__title">Кредит доверия для всех абонентов Apelsin.Net</h3>
+                  <p>В случае, если Вы забыли или не успели оплатить услуги вовремя, а доступ в Интернет очень важно иметь прямо сейчас, то Вы можете активировать услугу «Кредит...</p><a class="btn btn--grey presents-slider__btn" href="#">Получить подарок</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end presents-section-->
+        <!--begin options-->
+        <div class="options fade-in animate__animated">
+          <!--begin options-row-->
+          <div class="options-row">
+            <div class="options-item options-item--text">
+              <div class="options-item__bg-img" style="background-image: url(&quot;assets/img/options-bg-01.jpg&quot;)"></div><a class="options-item__top" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#options-home"></use>
+                </svg><span class="options-item__title">Умный дом</span></a><a class="options-item__link" href="#">Wi-Fi дверной звонок</a><a class="options-item__link" href="#">Умная безопасность «Ajax»</a><a class="btn btn--white options-item__btn" href="#">Подробнее</a>
+            </div><a class="options-item options-item--pic" href="#">
+              <div class="options-item__pic" style="background-image: url(&quot;assets/img/options-01.jpg&quot;)"></div>
+            </a>
+          </div>
+          <!--end options-row-->
+          <!--begin options-row-->
+          <div class="options-row"><a class="options-item options-item--pic" href="#">
+              <div class="options-item__pic" style="background-image: url(&quot;assets/img/options-02.jpg&quot;)"></div>
+            </a>
+            <div class="options-item options-item--text">
+              <div class="options-item__bg-img" style="background-image: url(&quot;assets/img/options-bg-02.jpg&quot;)"></div><a class="options-item__top" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#options-video"></use>
+                </svg><span class="options-item__title">IP Видеонаблюдение</span></a><a class="options-item__link" href="#">Облачное видеонаблюдение</a><a class="options-item__link" href="#">Установка IP-видеонаблюдения</a><a class="btn btn--white options-item__btn" href="#">Подробнее</a>
+            </div>
+          </div>
+          <!--end options-row-->
+        </div>
+        <!--end options-->
+        <!--begin news-sec-->
+        <div class="news-sec animate__animated fade-in animate__slow">
+          <!--begin section-header-->
+          <div class="section-header">
+            <div class="container">
+              <h2 class="title title--center">Центр новостей</h2>
+            </div>
+          </div>
+          <!--end section-header-->
+          <div class="container">
+            <!--begin news-sec__slider-->
+            <div class="news-sec__slider" id="news-sec__slider">
+              <!--begin news-sec__item--><a class="news-sec__item news-sec-item" href="#">
+                <div class="news-sec-item__pic"><img src="assets/img/news-sec-01.jpg" alt="picture"></div>
+                <div class="news-sec-item__info"><span class="news-sec-item__date">6 апреля / 2020</span>
+                  <h3 class="news-sec-item__title">Статический IP-адрес и его использование</h3>
+                </div>
+              </a>
+              <!--end news-sec__item-->
+              <!--begin news-sec__item--><a class="news-sec__item news-sec-item" href="#">
+                <div class="news-sec-item__pic"><img src="assets/img/news-sec-02.jpg" alt="picture"></div>
+                <div class="news-sec-item__info"><span class="news-sec-item__date">3 апреля / 2020</span>
+                  <h3 class="news-sec-item__title">Особенности и преимущества динамических IP-адресов</h3>
+                </div>
+              </a>
+              <!--end news-sec__item-->
+              <!--begin news-sec__item--><a class="news-sec__item news-sec-item" href="#">
+                <div class="news-sec-item__pic"><img src="assets/img/news-sec-03.jpg" alt="picture"></div>
+                <div class="news-sec-item__info"><span class="news-sec-item__date">27 марта / 2020</span>
+                  <h3 class="news-sec-item__title">Удаленная работа с провайдером Apelsin.net</h3>
+                </div>
+              </a>
+              <!--end news-sec__item-->
+              <!--begin news-sec__item--><a class="news-sec__item news-sec-item" href="#">
+                <div class="news-sec-item__pic"><img src="assets/img/news-sec-02.jpg" alt="picture"></div>
+                <div class="news-sec-item__info"><span class="news-sec-item__date">3 апреля / 2020</span>
+                  <h3 class="news-sec-item__title">Особенности и преимущества динамических IP-адресов</h3>
+                </div>
+              </a>
+              <!--end news-sec__item-->
+            </div>
+            <!--end news-sec__slider-->
+          </div>
+          <div class="news-sec__footer"><a class="btn btn--grey news-sec__btn" href="#">Все новости</a></div>
+        </div>
+        <!--end news-sec-->
+        <!--begin advantage-sec-->
+        <div class="advantage-sec animate__animated fade-in">
+          <!--begin section-header-->
+          <div class="section-header">
+            <div class="container">
+              <h2 class="title title--center">Никаких минусов, только выгоды!</h2>
+            </div>
+          </div>
+          <!--end section-header-->
+          <div class="container">
+            <!--begin advantage-sec__top-->
+            <div class="advantage-sec__top">
+              <!--begin advantage-sec__top-item-->
+              <div class="advantage-sec__top-item">
+                <div class="advantage-sec__top-icon advantage-sec__top-icon--modem"><img src="assets/img/modem.png" alt="picture"></div>
+                <h3 class="advantage-sec__top-title">Подключение<br>всего за 24 часа</h3>
+                <p>Правильный интернет меняет всё. В Apelsin.Net есть всё нужное. В итоге ваша работа становиться только лучше и эффективнее</p>
+              </div>
+              <!--end advantage-sec__top-item-->
+              <!--begin advantage-sec__top-item-->
+              <div class="advantage-sec__top-item">
+                <div class="advantage-sec__top-icon advantage-sec__top-icon--rocket"><img src="assets/img/rocket.png" alt="picture"></div>
+                <h3 class="advantage-sec__top-title">Интернет на космических<br>скоростях 1 Гбит</h3>
+                <p>Безлимитный трафик, одинаково максимальная скорость загрузки и выгрузки данных</p>
+              </div>
+              <!--end advantage-sec__top-item-->
+              <!--begin advantage-sec__top-item-->
+              <div class="advantage-sec__top-item">
+                <div class="advantage-sec__top-icon advantage-sec__top-icon--support"><img src="assets/img/support.png" alt="picture"></div>
+                <h3 class="advantage-sec__top-title">Техническая<br>поддержка 24/7</h3>
+                <p>Сердечное отношение к каждому клиенту. Мониторинг сети и ликвидация сбоев до обнаружения их абонентом</p>
+              </div>
+              <!--end advantage-sec__top-item-->
+            </div>
+            <!--end advantage-sec__top-->
+            <!--begin advantage-sec__body-->
+            <div class="advantage-sec__body">
+              <h3 class="advantage-sec__body-title">Бесплатное подключение высокоскоростного Интернета</h3>
+              <div class="advantage-sec__body-text">
+                <p>Многие люди недооценивают ценность хорошего, шустрого Интернета, пока он не начинает тормозить. Безлимитный проводной скоростной Интернет сегодня доступен каждому и по низким ценам, нужно только выбрать подходящий тарифный план.</p>
+                <p>Апельсин.нет — лучший интернет-провайдер, который обеспечивает киевлян стабильной, быстрой Сетью уже более 15 лет, за это время сформировал профессиональную политику по отношению к клиентам и к работе. Мы можем предложить вам:</p>
+                <ul class="advantage-sec__body-list">
+                  <li>выгодный, быстрый, безлимитный Интернет, стоимость которого можно узнать в разделе тарифов;</li>
+                  <li>мгновенное решение технических неполадок, круглосуточную поддержку;</li>
+                  <li>кабельный Интернет, подключение, настройку Wi-Fi;</li>
+                  <li>выгодные тарифные планы, акции;</li>
+                  <li>стабильный Интернет (300 Мбит).</li>
+                </ul>
+                <p>К нам обращаются не только физические лица и люди, которые хотят провести Интернет в квартиру, но и владельцы частных домов, компании, магазины. К каждой заявке мы подходим индивидуально, подбираем самый выгодный тариф для Интернета, выполняем заказ в течение суток с момента первого контакта с клиентом.</p>
+                <p>Если вам нужен Интернет на даче в Киевской области, подключение в частном доме или на крупном предприятии, это обговаривается по отдельному тарифу. Юридическим лицам мы предоставляем смету и все необходимые для начальства документы.</p>
+              </div>
+              <h3 class="advantage-sec__body-title">Лучший высокоскоростной безлимитный Интернет, тарифы, цены, акции</h3>
+              <div class="advantage-sec__body-text">
+                <p>Новый интернет-провайдер требуется в том случае, если текущий разочаровал вас неполадками или недостаточной скоростью.</p>
+                <p>На нашем сайте вы можете найти тарифы на услугу «безлимитный Интернет», ознакомиться с преимуществами пакетов. Или позвоните операторам, чтобы получить ответы на все интересующие вопросы, если нужно подключить гигабитный Интернет. Если вы не нашли желаемый тариф на сайте, свяжитесь с нами, и мы составим для вас индивидуальный план.</p>
+                <p>Цены на высокоскоростное кабельное подключение к Интернету формируются, исходя из тарифного плана: мы предоставляем Интернет в Киевской области и самой столице, прислушиваемся к пожеланиям заказчиков и постоянно совершенствуем систему работы, чтобы наши клиенты никогда не испытывали проблем со скоростью!</p>
+              </div>
+              <!--begin advantage-sec__body-hidden-->
+              <div class="advantage-sec__body-hidden">
+                <h3 class="advantage-sec__body-title">Выгодные условия сотрудничества</h3>
+                <div class="advantage-sec__body-text">
+                  <p>Интернет больше 100 Мбит — это в современном мире уже не прихоть, а стандарт скорости, и вам необязательно терпеть старого провайдера по привычке, когда вы можете уже завтра наслаждаться высокоскоростным соединением.</p>
+                  <p>Меняя обслуживающую компанию, вы обращаете пристальное внимание на сайт интернет-провайдера, а именно — на отзывы. 15 стабильных лет работы на рынке принесли к нам сотни постоянных клиентов, которые сотрудничают с нами до сих пор. Современный дата-центр и отменное оборудование гарантируют надежность связи, отсутствие неполадок. Мы заботимся о том, чтобы вы всегда были на связи!</p>
+                  <p>Наши клиенты часто спрашивают о том, сколько стоит подключить новый скоростной, проводной, стационарный Интернет — цена вас удивит! Ведь за столько лет упорного труда мы смогли выработать удобные, недорогие тарифные планы, которые выгодны обеим сторонам.</p>
+                </div>
+                <h3 class="advantage-sec__body-title">За что нас выбирают клиенты?</h3>
+                <div class="advantage-sec__body-text">
+                  <p>Наша основная задача — это обеспечение своих пользователей высокоскоростным, надежным подключением, круглосуточная техническая поддержка, а также вежливое и честное отношение к заказчикам. Все клиенты приходят от конкурентов и остаются с нами, потому что:</p>
+                  <ul class="advantage-sec__body-list">
+                    <li>мы можем подключить высокоскоростной Интернет без ограничения трафика всего за сутки;</li>
+                    <li>мы остаемся на связи с клиентом 24/7 и быстро реагируем на неполадки;</li>
+                    <li>профессиональный штат сотрудников отвечает на любые вопросы касательно связи и решает все поломки за короткий срок;</li>
+                    <li>мы готовы сотрудничать с юридическими лицами, крупными компаниями, а также предоставляем им гибкие тарифные планы;</li>
+                    <li>мы знаем, как критично может быть отсутствие Интернета, поэтому всегда входим в положение и можем быстро подключить Интернет по адресу, тарифы, акции вы узнаете лично у мастера.</li>
+                  </ul>
+                </div>
+                <h3 class="advantage-sec__body-title">Тарифные планы — Интернет и HD кабельное</h3>
+                <div class="advantage-sec__body-text">
+                  <p>Цены на безлимитный широкополосный Интернет интересуют наших клиентов не меньше, чем качественное кабельное телевидение: все развлекательные передачи, сериалы, фильмы можно получить за полцены, воспользовавшись выгодными акциями. А премиальное телевидение нового поколения вы можете попробовать с нами уже сегодня!</p>
+                  <p>Услуги подключения Интернета, стоимость, вы можете узнать у наших операторов в любое время суток. Вас интересует, сколько стоит провести кабельный, самый скоростной Интернет? Звоните!</p>
+                  <p>За 15 лет долгой, упорной работы мы стали лучшим поставщиком интернет-услуг по Киеву, области, готовы конкурировать с другими провайдерами по качеству связи и можем подключить выделенный высокоскоростной Интернет, стоимость которого не будет превышать рыночную.</p>
+                </div>
+                <h3 class="advantage-sec__body-title">Подключить быстрый безлимитный Интернет: тариф по Киеву</h3>
+                <div class="advantage-sec__body-text">
+                  <p>Apelsin.Net — это лучшая компания (интернет-провайдер), сайт наш способен дать ответы на все интересующие вопросы в любое время суток с помощью онлайн консультанта. Найти услуги интернет-провайдера, а также отправить заявку на подключение можно на главной странице нашего веб-сайта. Мы свяжемся с вами в течение короткого времени, и новое, высокоскоростное подключение будет у вас уже через 24 часа!</p>
+                </div>
+              </div>
+              <!--end advantage-sec__body-hidden-->
+              <div class="advantage-sec__body-footer"><a class="btn btn--grey advantage-sec__body-btn" href="#">Читать далее
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#arr-down"></use>
+                  </svg></a></div>
+            </div>
+            <!--end advantage-sec__body-->
+          </div>
+        </div>
+        <!--end advantage-sec-->
+        <!--begin request-sec-->
+        <div class="request-sec animate__animated fade-in">
+          <div class="container">
+            <!--begin request-sec__left-->
+            <div class="request-sec__left">
+              <h2 class="request-sec__title">Заявка на подключение</h2><span class="request-sec__subtitle">Отправьте форму и мы подберем для вас оптимальный тариф</span>
+            </div>
+            <!--end request-sec__left-->
+            <!--begin request-sec__right-->
+            <div class="request-sec__right">
+              <form class="request-sec__form">
+                <div class="input-required-wrap">
+                  <input class="request-sec__input" placeholder="Ваше имя">
+                  <div class="input-required-label"><span>Поле обязательно для заполнения</span></div>
+                </div>
+                <div class="input-required-wrap">
+                  <input class="phone-mask request-sec__input" placeholder="+38 (0__) ___-__-__">
+                  <div class="input-required-label"><span>Поле обязательно для заполнения</span></div>
+                </div>
+                <div class="request-sec__capcha g-recaptcha" data-theme="dark" data-sitekey="6Lc0GMEUAAAAAJyUVsUJc2KMlUCEpxLQyV0JWn74"></div>
+                <input class="btn btn--green request-sec__submit" type="submit" value="Отправить заявку">
+                <div class="request-sec__footer"><span>Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a></span></div>
+              </form>
+            </div>
+            <!--end request-sec__right-->
+          </div>
+        </div>
+        <!--end request-sec-->
+      </main>
+      <!--end content-->
+      <!--begin footer-->
+      <div class="footer">
+        <div class="container">
+          <!--begin footer-item-->
+          <div class="footer__item footer-item">
+            <div class="footer-item__top"><a class="footer-item__logo" href="/">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
+                </svg></a><span class="footer-item__copyright">© 2020, Apelsin.Net. Все права защищены.</span></div>
+            <ul class="footer-item__bottom-list">
+              <li class="footer-item__bottom-item"><a class="footer-item__bottom-link" href="#">Политика конфиденциальности</a></li>
+              <li class="footer-item__bottom-item"><a class="footer-item__bottom-link" href="#">Отчет о структуре собственности</a></li>
+              <li class="footer-item__bottom-item"><a class="footer-item__bottom-link" href="#">Информация для потребителей</a></li>
+            </ul><a class="footer-item__playmarket" href="#">
+              <div class="footer-item__playmarket-text"><span>Приложение для мобильных устройств</span></div>
+              <div class="footer-item__playmarket-icon"><img src="assets/img/playmarket.svg" alt="picture"></div>
+            </a>
+          </div>
+          <!--end footer-item-->
+          <!--begin footer-item-->
+          <div class="footer__item footer-item">
+            <!--begin footer-item__menu-sm-list-->
+            <ul class="footer-item__menu-sm-list">
+              <li class="footer-item__menu-sm-item"><a class="footer-item__menu-sm-link" href="#">Акции</a></li>
+              <li class="footer-item__menu-sm-item"><a class="footer-item__menu-sm-link" href="#">Новости</a></li>
+              <li class="footer-item__menu-sm-item"><a class="footer-item__menu-sm-link" href="#">Контакты</a></li>
+              <li class="footer-item__menu-sm-item"><a class="footer-item__menu-sm-link" href="#">О компании</a></li>
+              <li class="footer-item__menu-sm-item"><a class="footer-item__menu-sm-link" href="#">Вакансии</a></li>
+              <li class="footer-item__menu-sm-item"><a class="footer-item__menu-sm-link" href="#">Инструкции</a></li>
+            </ul>
+            <!--end footer-item__menu-sm-list-->
+          </div>
+          <!--end footer-item-->
+          <!--begin footer-item-->
+          <div class="footer__item footer-item">
+            <!--begin footer-item__menu-lg-list-->
+            <ul class="footer-item__menu-lg-list">
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Домашний интернет</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Частный сектор</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Интернет в офис</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Оптика в квартиру</a></li>
+            </ul>
+            <!--end footer-item__menu-lg-list-->
+            <!--begin footer-item__menu-lg-list-->
+            <ul class="footer-item__menu-lg-list">
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Телевидение HD</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Умный дом</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">IP Видеонаблюдение</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Дополнительные услуги</a></li>
+              <li class="footer-item__menu-lg-item"><a class="footer-item__menu-lg-link" href="#">Оборудование</a></li>
+            </ul>
+            <!--end footer-item__menu-lg-list-->
+          </div>
+          <!--end footer-item-->
+          <!--begin footer-item-->
+          <div class="footer__item footer-item"><a class="btn footer-item__btn-contacts" href="#">Связаться с нами</a>
+            <div class="footer-item__menu-contacts-list-close">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#close"></use>
+              </svg>
+            </div>
+            <!--begin footer-item__menu-contacts-list-->
+            <ul class="footer-item__menu-contacts-list">
+              <li class="footer-item__menu-contacts-item"><a class="footer-item__menu-contacts-link" href="tel:+380671111008">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#phone"></use>
+                  </svg><span>+38 (067) 1111-008 (Подключение)</span></a></li>
+              <li class="footer-item__menu-contacts-item"><a class="footer-item__menu-contacts-link" href="tel:+380968236402">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#phone"></use>
+                  </svg><span>+38 (096) 823-64-02 (Поддержка)</span></a></li>
+              <li class="footer-item__menu-contacts-item"><a class="footer-item__menu-contacts-link" href="viber://chat?number=+380968236402">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#viber"></use>
+                  </svg><span>+38 (096) 823-64-02 (Viber Чат)</span></a></li>
+              <li class="footer-item__menu-contacts-item"><a class="footer-item__menu-contacts-link" href="skype:support.apelsin.net?chat">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#skype"></use>
+                  </svg><span>support.apelsin.net</span></a></li>
+              <li class="footer-item__menu-contacts-item"><a class="footer-item__menu-contacts-link" href="tg://resolve?domain=ApelsinNetBot">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#telega"></use>
+                  </svg><span>ApelsinNetBot</span></a></li>
+              <li class="footer-item__menu-contacts-item"><a class="footer-item__menu-contacts-link" href="https://www.facebook.com/apelsin.net" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#fb"></use>
+                  </svg><span>ApelsinNet</span></a></li>
+            </ul>
+            <!--end footer-item__menu-contacts-list-->
+          </div>
+          <!--end footer-item-->
+        </div>
+      </div>
+      <!--end footer-->
+      <div class="popup__layer" id="popup__layer"></div>
+      <!--begin popup-success-->
+      <div class="popup popup-success" id="popup-success">
+        <div class="popup-inn">
+          <div class="popup__close">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </div>
+          <div class="popup-success__check">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#check"></use>
+            </svg>
+          </div>
+          <h2 class="popup-success__title">Заявка удачно отправлена</h2>
+          <h3 class="popup-success__subtitle">Наш сотрудник свяжется с вами в течение 24 часов для уточнения деталей подключения.</h3>
+        </div>
+      </div>
+      <!--end popup-success-->
+      <script src="assets/js/foundation.js"></script>
+      <script src="assets/js/app.js"></script>
+      <script src="assets/js/uncompressed.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </div>
+  </body>
+</html>
