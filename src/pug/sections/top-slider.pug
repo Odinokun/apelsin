@@ -1,40 +1,117 @@
 //begin top-slider
 .top-slider
   .top-slider__list#top-slider__list
-    .top-slider__item(style='background-color: #D3D5E2;')
+    //-begin SLIDE-01
+    .top-slider__item.top-slider__item--01(style='background-color: #D3D5E2;')
       .container
         .top-slider__banner
           picture
-            source(srcset="assets/img/bg-top-slider-01.jpg" media="(min-width: 768px)")
-            source(srcset="assets/img/bg-top-slider-01-mob.jpg")
+            source(srcset="assets/img/bg-top-slider-01.jpg" media="(min-width: 881px)")
+            source(srcset="assets/img/bg-top-slider-01-880.jpg" media="(min-width: 681px)")
+            source(srcset="assets/img/bg-top-slider-01-680.jpg" media="(min-width: 320px)")
             img(src="assets/img/bg-top-slider-01.jpg" alt="pic")
-        .top-slider__info
-          h3.top-slider__subtitle Дорогим врачам -
-          h2.top-slider__title Бесплатный интернет до конца года!
+        .top-slider__info.top-slider__info--01
+          h3.top-slider__subtitle.top-slider__subtitle--01 Дорогим лікарям -
+          h2.top-slider__title.top-slider__title--01 БЕЗКОШТОВНИЙ ІНТЕРНЕТ ДО КІНЦЯ РОКУ!
           .top-slider__hashtag
-            span #Поддерживаю Врачей
-    .top-slider__item(style='background-color: #D3D5E2;')
+            span # Підтримую Лікарів
+    //-end SLIDE-01
+
+    //-begin SLIDE-02
+    .top-slider__item.top-slider__item--02(style='background-color: #FFCA3C;')
       .container
         .top-slider__banner
           picture
-            source(srcset="assets/img/bg-top-slider-01.jpg" media="(min-width: 768px)")
-            source(srcset="assets/img/bg-top-slider-01-mob.jpg")
-            img(src="assets/img/bg-top-slider-01.jpg" alt="pic")
-        .top-slider__info
-          h3.top-slider__subtitle Дорогим врачам -
-          h2.top-slider__title Бесплатный интернет до конца года!
-          .top-slider__hashtag
-            span #Поддерживаю Врачей 2
-    .top-slider__item(style='background-color: #D3D5E2;')
+            source(srcset="assets/img/bg-top-slider-02.jpg" media="(min-width: 881px)")
+            source(srcset="assets/img/bg-top-slider-02-880.jpg" media="(min-width: 681px)")
+            source(srcset="assets/img/bg-top-slider-02-680.jpg" media="(min-width: 320px)")
+            img(src="assets/img/bg-top-slider-02.jpg" alt="pic")
+        .top-slider__info.top-slider__info--02
+          h2.top-slider__title.top-slider__title--02 Отримай -50% знижки на інтернет з цифровим TБ на півроку!
+          h3.top-slider__subtitle.top-slider__subtitle--02 Насолоджуйся якісними послугами <strong>лише за 85 ₴ на мicяць</strong>
+
+        .top-slider__right.top-slider__right--02
+          span Підключайся за 1 ₴
+          h3.top-slider__right-title.top-slider__right-title--02 100 Мбіт/с за 85 ₴
+          span на місяць
+    //-end SLIDE-02
+
+    //-begin SLIDE-03
+    .top-slider__item.top-slider__item--03(style='background-color: #FF7429;')
       .container
         .top-slider__banner
           picture
-            source(srcset="assets/img/bg-top-slider-01.jpg" media="(min-width: 768px)")
-            source(srcset="assets/img/bg-top-slider-01-mob.jpg")
-            img(src="assets/img/bg-top-slider-01.jpg" alt="pic")
-        .top-slider__info
-          h3.top-slider__subtitle Дорогим врачам -
-          h2.top-slider__title Бесплатный интернет до конца года!
-          .top-slider__hashtag
-            span #Поддерживаю Врачей 3
+            source(srcset="assets/img/bg-top-slider-03.jpg" media="(min-width: 881px)")
+            source(srcset="assets/img/bg-top-slider-03-880.jpg" media="(min-width: 681px)")
+            source(srcset="assets/img/bg-top-slider-03-680.jpg" media="(min-width: 320px)")
+            img(src="assets/img/bg-top-slider-03.jpg" alt="pic")
+        .top-slider__info.top-slider__info--03
+          h2.top-slider__title.top-slider__title--03 Отримай -50% знижки на інтернет з цифровим TБ на півроку!
+          h3.top-slider__subtitle.top-slider__subtitle--03 Насолоджуйся якісними послугами <strong>лише за 150 ₴ в місяць</strong>
+
+        .top-slider__right.top-slider__right--03
+          span Підключайся за 1 ₴
+          h3.top-slider__right-title.top-slider__right-title--03 100 Мбіт/с за 85 ₴
+          span на місяць
+    //-end SLIDE-03
+
+    //-begin SLIDE-04
+    .top-slider__item.top-slider__item--04(style='background-color: #000;')
+      .container
+        .top-slider__banner
+          picture
+            source(srcset="assets/img/bg-top-slider-04.jpg" media="(min-width: 881px)")
+            source(srcset="assets/img/bg-top-slider-04-880.jpg" media="(min-width: 681px)")
+            source(srcset="assets/img/bg-top-slider-04-680.jpg" media="(min-width: 320px)")
+            img(src="assets/img/bg-top-slider-04.jpg" alt="pic")
+        .top-slider__info.top-slider__info--04
+          h2.top-slider__title.top-slider__title--04 Дивись уважно! Багато кІно
+          h3.top-slider__subtitle.top-slider__subtitle--04 Насолоджуйся улюбленими телеканалами та фільмами цілих <strong>півроку БЕЗКОШТОВНО</strong>
+          ul.top-slider__ul.top-slider__ul--04
+            li 246 каналів
+            li 70 каналів в Full HD-якості
+            li TV-пакет за ціною приставки
+            li 5000 фільмів в HD
+    //-end SLIDE-04
+
+    //-begin SLIDE-05
+    .top-slider__item.top-slider__item--05(style='background-color: #FFCA3C;')
+      .container
+        .top-slider__banner
+          picture
+            source(srcset="assets/img/bg-top-slider-05.jpg" media="(min-width: 881px)")
+            source(srcset="assets/img/bg-top-slider-05-880.jpg" media="(min-width: 681px)")
+            source(srcset="assets/img/bg-top-slider-05-680.jpg" media="(min-width: 320px)")
+            img(src="assets/img/bg-top-slider-05.jpg" alt="pic")
+        .top-slider__info.top-slider__info--05
+          h2.top-slider__title.top-slider__title--05 Отримай -70% знижки
+          h3.top-slider__subtitle.top-slider__subtitle--05 на підключення інтернету <br>Лише <del>2000</del> <strong>599 ₴</strong>
+          p Залишайся на зв’язку завжди, особливо, коли якість з’єднання - найважливіше.
+          h4.top-slider__ul-title.top-slider__ul-title--05 З Apelsin.Net ви отримаєте:
+          ul.top-slider__ul.top-slider__ul--05
+            li Захоплюючу надійність зв’язку
+            li Стабільна швидкість навіть у години пік
+            li Телебачення на будь-який смак з 250+ каналам
+            li 5000 фільмів в HD + Серіали
+    //-end SLIDE-05
+
+    //-begin SLIDE-06
+    .top-slider__item.top-slider__item--06(style='background-color: #242424;')
+      .container
+        .top-slider__banner
+          picture
+            source(srcset="assets/img/bg-top-slider-06.jpg" media="(min-width: 881px)")
+            source(srcset="assets/img/bg-top-slider-06-880.jpg" media="(min-width: 681px)")
+            source(srcset="assets/img/bg-top-slider-06-680.jpg" media="(min-width: 320px)")
+            img(src="assets/img/bg-top-slider-06.jpg" alt="pic")
+        .top-slider__info.top-slider__info--06
+          h2.top-slider__title.top-slider__title--06 <span>Даруємо</span> бездротову систему безпеки Ajax
+          h3.top-slider__subtitle.top-slider__subtitle--06 <span>+</span> 2 місяці охорони
+          ul.top-slider__ul.top-slider__ul--06
+            li Стартовий комплект охоронної<br>системи Ajax
+            li 2 місяці послуг охорони від<br>ОА «Партнер»
+            li Підключення оптоволоконним<br>кабелем - 1 Гбіт/c
+            li Безлімітний інтернет - 100 Мбiт/с
+          .top-slider__ps.top-slider__ps--06 <span>*</span> Обладнання надається в оренду вартістю 1 гривня строком на 5 років
+    //-end SLIDE-06
 //end top-slider

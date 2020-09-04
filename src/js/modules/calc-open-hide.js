@@ -6,6 +6,7 @@ module.exports = function() {
 
     $('.calculator-open-section, .calculator-banners--desktop').slideUp();
     $('.calculator-form-right, .calculator-banners--mobile').slideDown();
+    $('.calculator-form-right').addClass('active');
   });
   //end calculator-open-hidden
 

@@ -65,7 +65,7 @@ form.calculator-form
 
         //begin calculator-item-period
         .calculator__item.calculator-item.calculator-item-period
-          h4.calculator-item__title Период оплаты
+          h4.calculator-item__title Период
           .calculator-item-period__list
             label.calculator-item-period__label
               input(type='radio' name='period').calculator-item-period__input
@@ -83,31 +83,56 @@ form.calculator-form
 
         //begin calculator-item-tv
         .calculator__item.calculator-item.calculator-item-tv
-          h4.calculator-item__title Добавьте телеканалы
+          h4.calculator-item__title Телевидение
           .calculator-item-tv__list
+            label.calculator-item-tv__label
+              input(type='radio' name='tv' value='0' checked).calculator-item-tv__input
+              .calculator-item-tv__info
+                .calculator-item-tv__price
+                  span 54
+                  span канала
+                .calculator-item-tv__text
+                  span Бесплатное ТВ
+                  span 18 HD
+
             label.calculator-item-tv__label
               input(type='radio' name='tv' value='0').calculator-item-tv__input
               .calculator-item-tv__info
                 .calculator-item-tv__price
-                  span 60
+                  span 157
+                  span каналов
                 .calculator-item-tv__text
-                  span Бесплатное ТВ<br><strong>14 HD</strong>
+                  span Минимальный
+                  span 63 HD / 6 UHD
 
             label.calculator-item-tv__label
-              input(type='radio' name='tv' value='50').calculator-item-tv__input
+              input(type='radio' name='tv' value='0').calculator-item-tv__input
               .calculator-item-tv__info
                 .calculator-item-tv__price
-                  span 221
+                  span 209
+                  span каналов
                 .calculator-item-tv__text
-                  span Базовый<br><strong>57 HD</strong><i>5000 фильмов</i>
+                  span Базовый
+                  span 94 HD / 6 UHD<br>5000 фильмов
 
             label.calculator-item-tv__label
-              input(type='radio' name='tv' value='139' checked).calculator-item-tv__input
+              input(type='radio' name='tv' value='0').calculator-item-tv__input
               .calculator-item-tv__info
                 .calculator-item-tv__price
-                  span 243
+                  span 224
+                  span канала
                 .calculator-item-tv__text
-                  span Премиальный<br><strong>89 HD / 3 UHD</strong><i>5000 фильмов</i>
+                  span Премиальный
+                  span 101 HD / 6 UHD<br>5000 фильмов
+
+          .calculator-item-tv__footer.calculator-item-tv-footer
+            .calculator-item-tv-footer__label
+              input(type='checkbox').calculator-item-tv-footer__input
+              span Амедиатека
+            .calculator-item-internet__static-info.tooltip-wrap
+              +svg('question')
+              .tooltip
+                p Всегда есть что посмотреть!<br>Новые серии в день выхода и тысячи фильмов на вечер. Без рекламы, в хорошем качестве, с любимой озвучкой или в оригинале.
         //end calculator-item-tv
       //end calculator
         

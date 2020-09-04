@@ -59,7 +59,6 @@ module.exports = function () {
       document.querySelector('.sale-counter__item--minutes').classList.add('zero');
     }
 
-
   }, 1000);
   //end sale countdown
 

@@ -40,8 +40,8 @@ $(function() {
   require('./modules/advantageOpen')();
 
   // begin calculator
-  // require('./modules/calc')();
   require('./modules/calc-open-hide')();
+    //всплывающее окно с информацией в моб версии
   require('./modules/fixedCalc')();
 
   // begin sale countdown
