@@ -50,7 +50,7 @@ $(function() {
   // begin sale countdown
   require('./modules/countdown')();
 
-  // begin hide/on checkbox in calculator tv section
+  // begin index page TV section
   require('./modules/tvCheckboxHideOn')();
 
 });
