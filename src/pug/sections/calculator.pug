@@ -11,11 +11,11 @@ form.calculator-form
           .calculator-item-region__city
             +svg('marker')
             select#region-select
-              option Киев
+              option(selected) Киев
               option Бровары
               option Чубинское
               option Гора
-              option(selected) Большая Александровка
+              option Большая Александровка
               option Малая Александровка
               option Безугловка
         //end calculator-item-region
@@ -135,7 +135,7 @@ form.calculator-form
                 .tooltip
                   p Всегда есть что посмотреть!<br>Новые серии в день выхода и тысячи фильмов на вечер. Без рекламы, в хорошем качестве, с любимой озвучкой или в оригинале.
             label.calculator-item-tv-footer__static-label#calculator-item-tv-footer__static-label
-              input(type='checkbox').calculator-item-tv-footer__static-checkbox
+              input(type='checkbox' checked).calculator-item-tv-footer__static-checkbox
               span.calculator-item-tv-footer__static-text Услуга «Кинозал»
         //end calculator-item-tv
       //end calculator
