@@ -479,8 +479,17 @@
     padding: 20px 0;
     color: #252525;
   }
+  &:hover {
+    color: #fff;
+    &::before {
+      width: 100%;
+      content: '';
+    }
+  }
   &::before {
     position: absolute;
+    //top: 0;
+    bottom: 0;
     right: 0;
     left: 0;
     width: 0;
@@ -493,9 +502,6 @@
     @include max(1150) {
       display: none;
     }
-  }
-  &::before {
-    top: 0;
   }
 }
 
